@@ -67,6 +67,7 @@ These fields can be used to filter the query. By default, without any filters, t
 
 #### Response
 List of brands
+<pre>
   [
       {
       "id": 1,
@@ -87,7 +88,7 @@ List of brands
     "search_keywords": ""
   }
   ]
-   
+</pre>
 
 ### <a id="brands_r2"></a>POST brands.json
 Create brands in a store
@@ -152,7 +153,7 @@ tr.mandatory {
 
 #### Response
 Creates a brand
-
+<pre>
     {
     "id": 10,
     "name": "Xmen",
@@ -162,7 +163,7 @@ Creates a brand
     "image_file": "t/apirmzk0a__43675.jpg",
     "search_keywords": "xmen, awesomeness"
     }
-   
+</pre>   
 
 ### <a id="brands_r3"></a>GET brands/id.json
 GET a brand from a store
@@ -172,7 +173,7 @@ This GET request does not take any parameters.
 
 #### Response
 Brand by ID
-
+<pre>
     {
       "id": 1,
       "name": "Apple",
@@ -182,7 +183,7 @@ Brand by ID
       "image_file": "",
       "search_keywords": ""
     }
-    
+</pre>    
 
 ### <a id="brands_r4"></a>PUT brands/id.json
 UPDATE a brand from a store
@@ -236,7 +237,7 @@ This PUT request does not take any parameters.
 
 #### Response
 A successful put udpates a brand in the store 
-
+<pre>
   {
     "id": 10,
     "name": "Xmen",
@@ -246,7 +247,7 @@ A successful put udpates a brand in the store
     "image_file": "t/apirmzk0a__43675.jpg",
     "search_keywords": "xmen, awesomeness"
   }
-
+</pre>
 ### <a id="brands_r5"></a>GET brands/count.json
 Get a total number of brands in the store
 
@@ -255,11 +256,11 @@ This request does not take any parameters.
 
 #### Response
 Returns the number of brands in the store 
-
+<pre>
   {
     "count": 10
   }
-
+</pre>
 Here are resources to delete brands. This is a potentially destrutive operation. Remember that you cannot recover deleted brands.
 
 ### <a id="brands_r6"></a>DELETE brands.json
