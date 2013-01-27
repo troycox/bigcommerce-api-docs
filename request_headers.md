@@ -24,8 +24,8 @@ application/xml (for .xml requests) <br class="atl-forced-newline"> </p></td>
 <td class=""><p> Authorization <br class="atl-forced-newline"> </p></td>
 <td class=""><p> All <br class="atl-forced-newline"> </p></td>
 <td class=""><p> Basic <br class="atl-forced-newline"> </p></td>
-<td class=""><p> The user credentials for accessing the API. See the ?<a href="/display/API/Authentication">Authentication</a> page for details. <br class="atl-forced-newline"> </p></td>
-<td class=""><p> &nbsp; ? <br class="atl-forced-newline"> </p></td>
+<td class=""><p> The user credentials for accessing the API. See the Yes<a href="/display/API/Authentication">Authentication</a> page for details. <br class="atl-forced-newline"> </p></td>
+<td class=""><p> &nbsp; Yes <br class="atl-forced-newline"> </p></td>
 <td class=""><p> Basic&nbsp;YWRtaW46cGFzc3dvcmQ= <br class="atl-forced-newline"> </p></td>
 </tr>
 <tr>
@@ -34,7 +34,7 @@ application/xml (for .xml requests) <br class="atl-forced-newline"> </p></td>
 <td class=""><p> application/json (for .json requests) <br class="atl-forced-newline">
 application/xml (for .xml requests) <br class="atl-forced-newline"> </p></td>
 <td class=""><p> The MIME type of the request body. Use to validate and parse the request to the API. </p></td>
-<td class=""><p> &nbsp; ? <br class="atl-forced-newline"> </p></td>
+<td class=""><p> &nbsp; Yes <br class="atl-forced-newline"> </p></td>
 <td class=""><p> application/json </p></td>
 </tr>
 <tr>
