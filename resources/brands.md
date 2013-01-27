@@ -185,7 +185,7 @@ Brand by ID
     }
 </pre>    
 
-### <a id="brands_r4"></a>PUT brands/id.json
+### PUT brands/id.json
 UPDATE a brand from a store
 
 #### Request
