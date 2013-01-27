@@ -29,6 +29,7 @@
 </table>
    
 ## Description
+
 ### GET countries/states.json
 GET states from a store
 
