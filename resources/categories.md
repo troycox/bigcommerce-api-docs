@@ -119,11 +119,13 @@ Create categories in a store
 
 #### Request
 The POST request allows following fields. Mandatory fields are styled blue.
+<!-- do not change this. for rendering on the main site -->
 <style type="text/css">
 tr.mandatory {
   color: aliceblue;
 }
 </style>
+<!-- style complete -->
 
 <table class="table table-bordered ">
   <thead>
