@@ -7,31 +7,31 @@
  </thead>
  <tbody>
    <tr>
-     <td><a href="#brands_r1">GET  /brands.json</a></td>
+     <td><a href="#get-brandsjson">GET  /brands.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r2">POST /brands.json </a></td>
+     <td><a href="#post-brandsjson">POST /brands.json </a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r3">GET /brands/id.json</a></td>
+     <td><a href="#get-brandsidjson">GET /brands/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r4">PUT /brands/id.json</a></td>
+     <td><a href="#put-brandsidjson">PUT /brands/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r5">GET /brands/count.json</a></td>
+     <td><a href="#get-brandscountjson">GET /brands/count.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r6">DELETE /brands.json</a></td>
+     <td><a href="#delete-brandsjson">DELETE /brands.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#brands_r7">DELETE /brands/id.json</a></td>
+     <td><a href="#delete-brandsidjson">DELETE /brands/id.json</a></td>
      
    </tr>
    
@@ -39,7 +39,7 @@
 </table>
    
 ## Description
-### <a id="brands_r1"></a>GET brands.json
+### GET brands.json
 GET brands from a store
 
 #### Request
@@ -90,7 +90,7 @@ List of brands
   ]
 </pre>
 
-### <a id="brands_r2"></a>POST brands.json
+### POST brands.json
 Create brands in a store
 
 #### Request
@@ -165,7 +165,7 @@ Creates a brand
     }
 </pre>   
 
-### <a id="brands_r3"></a>GET brands/id.json
+### GET brands/id.json
 GET a brand from a store
 
 #### Request
@@ -248,7 +248,7 @@ A successful put udpates a brand in the store
     "search_keywords": "xmen, awesomeness"
   }
 </pre>
-### <a id="brands_r5"></a>GET brands/count.json
+### GET brands/count.json
 Get a total number of brands in the store
 
 #### Request
@@ -263,8 +263,8 @@ Returns the number of brands in the store
 </pre>
 Here are resources to delete brands. This is a potentially destrutive operation. Remember that you cannot recover deleted brands.
 
-### <a id="brands_r6"></a>DELETE brands.json
+### DELETE brands.json
 DELETE all brands
 
-### <a id="brands_r7"></a>DELETE brands/id.json
+### DELETE brands/id.json
 DELETE a brand
