@@ -1,9 +1,3 @@
-## BigCommerce API
-This is the documentation for BigCommerce REST API. There are sections that can be improved. Feel free to contribute via pull requests. Some things to remember while submitting pull requests
-
-1. Fork the repo and create a feature branch
-2. Use these feature branches while submitting pull requests.
-
 ## Overview
 
 The API currently supports Basic access authentication. Connections to the API must be made with a secure HTTPS connection. Credentials should consist of a valid username and their associated API token. See the [Enabling API Access](#api_access) section below for instructions on obtaining an API token. If the credentials are invalid or not supplied, then a 401 Unauthorized response will be sent.
