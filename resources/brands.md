@@ -189,7 +189,7 @@ Brand by ID
 UPDATE a brand from a store
 
 #### Request
-This PUT request does not take any parameters.
+This PUT request takes following parameters.
 <table class="table table-bordered">
   <thead>
    <tr>
