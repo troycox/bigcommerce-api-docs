@@ -13,15 +13,15 @@
    </tr>
 
    <tr>
-     <td><a href="#get-countrieidstatesidjson">GET /countries/id/states/id.json</a></td>
+     <td><a href="#get-countriesidstatesidjson">GET /countries/id/states/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-countriestatesidjson">GET /countries/states/id.json</a></td>
+     <td><a href="#get-countriesstatesidjson">GET /countries/states/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-countriestatescountjson">GET /countries/states/count.json</a></td>
+     <td><a href="#get-countriesstatescountjson">GET /countries/states/count.json</a></td>
      
    </tr>
    
