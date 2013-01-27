@@ -94,7 +94,7 @@ Create brands in a store
 
 #### Request
 The POST request allows following fields. Mandatory fields are styled blue.
-<style>
+<style type="text/css">
 tr.mandatory {
   color: aliceblue;
 }
@@ -153,15 +153,15 @@ tr.mandatory {
 #### Response
 Creates a brand
 
-  {
-  "id": 10,
-  "name": "Xmen",
-  "page_title": "X men brand",
-  "meta_keywords": null,
-  "meta_description": null,
-  "image_file": "t/apirmzk0a__43675.jpg",
-  "search_keywords": "xmen, awesomeness"
-  }
+    {
+    "id": 10,
+    "name": "Xmen",
+    "page_title": "X men brand",
+    "meta_keywords": null,
+    "meta_description": null,
+    "image_file": "t/apirmzk0a__43675.jpg",
+    "search_keywords": "xmen, awesomeness"
+    }
    
 
 ### <a id="brands_r3"></a>GET brands/id.json
@@ -173,15 +173,15 @@ This GET request does not take any parameters.
 #### Response
 Brand by ID
 
-  {
-    "id": 1,
-    "name": "Apple",
-    "page_title": "",
-    "meta_keywords": "",
-    "meta_description": "",
-    "image_file": "",
-    "search_keywords": ""
-  }
+    {
+      "id": 1,
+      "name": "Apple",
+      "page_title": "",
+      "meta_keywords": "",
+      "meta_description": "",
+      "image_file": "",
+      "search_keywords": ""
+    }
     
 
 ### <a id="brands_r4"></a>PUT brands/id.json
