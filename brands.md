@@ -7,31 +7,31 @@
  </thead>
  <tbody>
    <tr>
-     <td>[GET /brands.json](#brands_r1)</td>
+     <td><a href="#brands_r1"><span class="label label-info">GET </span> <%= "#{base_url}brands.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[POST /brands.json](#brands_r2)/td>
+     <td><a href="#brands_r2"><span class="label label-success">POST </span> <%= "#{base_url}brands.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[GET /brands/id.json](#brands_r3)</td>
+     <td><a href="#brands_r3"><span class="label label-info">GET </span> <%= "#{base_url}brands/id.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[PUT /brands/id.json](#brands_r4)</td>
+     <td><a href="#brands_r4"><span class="label label-warning">PUT </span> <%= "#{base_url}brands/id.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[PUT /brands/count.json](#brands_r5)</td>
+     <td><a href="#brands_r5"><span class="label label-info">GET </span> <%= "#{base_url}brands/count.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[DELETE /brands.json](#brands_r6)</td>
+     <td><a href="#brands_r6"><span class="label label-important">DELETE </span> <%= "#{base_url}brands.json" %></a></td>
      
    </tr>
    <tr>
-     <td>[DELETE /brands/id.json](#brands_r7)</td>
+     <td><a href="#brands_r7"><span class="label label-important">DELETE </span> <%= "#{base_url}brands/id.json" %></a></td>
      
    </tr>
    
