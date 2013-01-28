@@ -168,7 +168,7 @@ This PUT request takes following parameters.
   </thead>
   <tbody>
    
-   <tr class="">
+   <tr >
      <td>name</td>
      <td>string</td>
      

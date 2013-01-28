@@ -321,10 +321,10 @@ tr.mandatory {
 </style>
 
 <table class="table table-bordered" ><thead>
-      <tr class="">
-  <th class="" data-column="0"><div><p>Field </p></div></th>
-  <th class="" data-column="1"><div><p>Type </p></div></th>
-  <th class="" data-column="2"><div><p>Description </p></div></th>
+      <tr >
+  <th  data-column="0"><div><p>Field </p></div></th>
+  <th  data-column="1"><div><p>Type </p></div></th>
+  <th  data-column="2"><div><p>Description </p></div></th>
   </tr></thead><tbody>
 
   <tr class="mandatory">

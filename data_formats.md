@@ -18,12 +18,13 @@ JSON has a content type of application/json.
 ### Request Structure
 The body of a JSON request is simply an object containing a set of key:value pairs. A simple representation of a product object is:
 
-
-> {
->     "id": 5,
->     "name": "iPod",
->     "description": "A portable MP3 music player."
-> }
+<pre>
+ {
+     "id": 5,
+     "name": "iPod",
+     "description": "A portable MP3 music player."
+ }
+</pre>
 
 ### Response structure
 Responses are structured similarly to requests. If a request returns a single object then the response will contain a single object containing the fields for that resource:

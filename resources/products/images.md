@@ -106,19 +106,19 @@ tr.mandatory {
    
    <td>When specifying a product image, the image_file should be specified as either: A path to an image already uploaded via FTP in the import directory and the path should be relative from the import directory. It can be a URL to an image accessible on the internet.</td>
  </tr>
- <tr class="">
+ <tr >
    <td >is_thumbnail</td>
    <td>boolean</td>
    
    <td>If true, the image is used as product thumbnail</td>
  </tr>
- <tr class="">
+ <tr >
    <td >sort_order</td>
    <td>integer</td>
    
    <td>The order in which the image will be displayed on the product page. When updating if the image is given a lower priority, all image with a sort_order the same or greater than the images new sort_order value will have their sort_order reordered</td>
  </tr>
- <tr class="">
+ <tr >
    <td >description</td>
    <td>text</td>
    
@@ -181,25 +181,25 @@ This PUT request takes following parameters.
 </thead>
 <tbody>
 
- <tr class="">
+ <tr >
    <td >image_file</td>
    <td>string</td>
    
    <td>When specifying a product image, the image_file should be specified as either: A path to an image already uploaded via FTP in the import directory and the path should be relative from the import directory. It can be a URL to an image accessible on the internet.</td>
  </tr>
- <tr class="">
+ <tr >
    <td >is_thumbnail</td>
    <td>boolean</td>
    
    <td>If true, the image is used as product thumbnail</td>
  </tr>
- <tr class="">
+ <tr >
    <td >sort_order</td>
    <td>integer</td>
    
    <td>The order in which the image will be displayed on the product page. When updating if the image is given a lower priority, all image with a sort_order the same or greater than the images new sort_order value will have their sort_order reordered</td>
  </tr>
- <tr class="">
+ <tr >
    <td >description</td>
    <td>text</td>
    

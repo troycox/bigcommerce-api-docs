@@ -171,14 +171,14 @@ This PUT request takes following parameters.
   </thead>
   <tbody>
    
-   <tr class="">
+   <tr >
      <td>label</td>
      <td>string</td>
      
      <td>The name of the label</td>
    </tr>
    
-   <tr class="">
+   <tr >
      <td>value</td>
      <td>variable</td>
      

@@ -228,7 +228,7 @@ This PUT request takes following parameters.
    </tr>
   </thead>
   <tbody>
-   <tr class="">
+   <tr >
      <td>name</td>
      <td>string</td>
      
@@ -240,7 +240,7 @@ This PUT request takes following parameters.
      
      <td>Friendly name displayed to the customer</td>
    </tr>
-   <tr class="">
+   <tr >
      <td>type</td>
      <td>enum</td>
      

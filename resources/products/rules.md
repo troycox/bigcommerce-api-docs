@@ -128,19 +128,19 @@ tr.mandatory {
      
      <td>When specifying a product rule, the rule_file should be specified as either: A path to an rule already uploaded via FTP in the import directory and the path should be relative from the import directory. It can be a URL to an rule accessible on the internet.</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >is_thumbnail</td>
      <td>boolean</td>
      
      <td>If true, the rule is used as product thumbnail</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >sort_order</td>
      <td>integer</td>
      
      <td>The order in which the rule will be displayed on the product page. When updating if the rule is given a lower priority, all rule with a sort_order the same or greater than the rules new sort_order value will have their sort_order reordered</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >description</td>
      <td>text</td>
      
@@ -236,19 +236,19 @@ This PUT request takes following parameters.
    
    <td>When specifying a product rule, the rule_file should be specified as either: A path to an rule already uploaded via FTP in the import directory and the path should be relative from the import directory. It can be a URL to an rule accessible on the internet.</td>
  </tr>
- <tr class="">
+ <tr >
    <td >is_thumbnail</td>
    <td>boolean</td>
    
    <td>If true, the rule is used as product thumbnail</td>
  </tr>
- <tr class="">
+ <tr >
    <td >sort_order</td>
    <td>integer</td>
    
    <td>The order in which the rule will be displayed on the product page. When updating if the rule is given a lower priority, all rule with a sort_order the same or greater than the rules new sort_order value will have their sort_order reordered</td>
  </tr>
- <tr class="">
+ <tr >
    <td >description</td>
    <td>text</td>
    

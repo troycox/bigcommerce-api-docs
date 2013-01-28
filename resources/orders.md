@@ -53,44 +53,44 @@ These fields can be used to filter the query. By default, without any filters, t
   <tbody>
    
    <tr>
-    <td class=""> id </td>
-    <td class=""> int </td>
-    <td class=""> The ID of the order. This is auto-generated for new orders. </td>
+    <td > id </td>
+    <td > int </td>
+    <td > The ID of the order. This is auto-generated for new orders. </td>
     </tr>
 
     <tr>
-    <td class=""> customer_id </td>
-    <td class=""> int </td>
-    <td class=""> The ID of the customer that placed the order or 0 if it was a guest order. </td>
+    <td > customer_id </td>
+    <td > int </td>
+    <td > The ID of the customer that placed the order or 0 if it was a guest order. </td>
     </tr>
 
     <tr>
-    <td class=""> date_created </td>
-    <td class=""> date </td>
-    <td class=""> The date the order was placed. If not supplied, the current date will be used. Please note that orders processed by live online payment gateways first arrive in the orders data with an "Incomplete" <strong>status</strong> and are then updated (see the <strong>date_modified</strong> field) with final payment information. If your application relies on the arrival of new orders you may need to check both <strong>date_created</strong> and <strong>status</strong> fields (or <strong>status_id</strong>). </td>
+    <td > date_created </td>
+    <td > date </td>
+    <td > The date the order was placed. If not supplied, the current date will be used. Please note that orders processed by live online payment gateways first arrive in the orders data with an "Incomplete" <strong>status</strong> and are then updated (see the <strong>date_modified</strong> field) with final payment information. If your application relies on the arrival of new orders you may need to check both <strong>date_created</strong> and <strong>status</strong> fields (or <strong>status_id</strong>). </td>
     </tr>
    <tr>
-    <td class=""> total_inc_tax </td>
-    <td class=""> decimal  </td>
-    <td class=""> The total of the order including tax. </td>
+    <td > total_inc_tax </td>
+    <td > decimal  </td>
+    <td > The total of the order including tax. </td>
     </tr>
 
     <tr>
-    <td class=""> status_id </td>
-    <td class=""> int </td>
-    <td class=""> The status of the order. A list of available statuses can be retrieved from <a href="/display/API/Order+Statuses">Order Statuses</a> </td>
+    <td > status_id </td>
+    <td > int </td>
+    <td > The status of the order. A list of available statuses can be retrieved from <a href="/display/API/Order+Statuses">Order Statuses</a> </td>
     </tr>
 
     <tr>
-  <td class=""> payment_method </td>
-  <td class=""> string </td>
-  <td class=""> The payment method used for the order. </td>
+  <td > payment_method </td>
+  <td > string </td>
+  <td > The payment method used for the order. </td>
   </tr>
 
   <tr>
-  <td class=""> is_deleted </td>
-  <td class=""> boolean </td>
-  <td class=""> Indicates if the order was deleted (archived). </td>
+  <td > is_deleted </td>
+  <td > boolean </td>
+  <td > Indicates if the order was deleted (archived). </td>
   </tr>
   </tbody>
 </table>
@@ -288,14 +288,14 @@ This PUT request takes following mandatory parameters.
    
     
     <tr class="mandatory">
-    <td class=""> status_id </td>
-    <td class=""> int </td>
-    <td class=""> The status id for the order. This is a number from 0-12. Check the <a href="#orderstatus"> Order status </a> endpoint for more info. </td>
+    <td > status_id </td>
+    <td > int </td>
+    <td > The status id for the order. This is a number from 0-12. Check the <a href="#orderstatus"> Order status </a> endpoint for more info. </td>
     </tr>
     <tr>
-    <td class=""> is_deleted </td>
-    <td class=""> boolean </td>
-    <td class=""> Indicates if the order was deleted (archived). </td>
+    <td > is_deleted </td>
+    <td > boolean </td>
+    <td > Indicates if the order was deleted (archived). </td>
     </tr>
     
   </tbody>
@@ -303,201 +303,201 @@ This PUT request takes following mandatory parameters.
 
 A full list of allowed fields is described below.
 <table class="table table-bordered"><thead><tr class="sortableHeader">
-<th class="" data-column="0"><div class="tablesorter-header-inner"> API Field </div></th>
-<th class="" data-column="1"><div class="tablesorter-header-inner"> API Data Type </div></th>
-<th class="" data-column="6"><div class="tablesorter-header-inner"> Field Description </div></th>
+<th  data-column="0"><div class="tablesorter-header-inner"> API Field </div></th>
+<th  data-column="1"><div class="tablesorter-header-inner"> API Data Type </div></th>
+<th  data-column="6"><div class="tablesorter-header-inner"> Field Description </div></th>
 </tr></thead><tbody>
 
 <tr>
-<td class=""> id </td>
-<td class=""> int </td>
-<td class=""> The ID of the order. This is auto-generated for new orders. </td>
+<td > id </td>
+<td > int </td>
+<td > The ID of the order. This is auto-generated for new orders. </td>
 </tr>
 
 <tr>
-<td class=""> customer_id </td>
-<td class=""> int </td>
-<td class=""> The ID of the customer that placed the order or 0 if it was a guest order. </td>
+<td > customer_id </td>
+<td > int </td>
+<td > The ID of the customer that placed the order or 0 if it was a guest order. </td>
 </tr>
 
 <tr>
-<td class=""> date_created </td>
-<td class=""> date </td>
-<td class=""> The date the order was placed. If not supplied, the current date will be used. Please note that orders processed by live online payment gateways first arrive in the orders data with an "Incomplete" <strong>status</strong> and are then updated (see the <strong>date_modified</strong> field) with final payment information. If your application relies on the arrival of new orders you may need to check both <strong>date_created</strong> and <strong>status</strong> fields (or <strong>status_id</strong>). </td>
+<td > date_created </td>
+<td > date </td>
+<td > The date the order was placed. If not supplied, the current date will be used. Please note that orders processed by live online payment gateways first arrive in the orders data with an "Incomplete" <strong>status</strong> and are then updated (see the <strong>date_modified</strong> field) with final payment information. If your application relies on the arrival of new orders you may need to check both <strong>date_created</strong> and <strong>status</strong> fields (or <strong>status_id</strong>). </td>
 </tr>
 
 <tr>
-<td class=""> date_modified </td>
-<td class=""> date </td>
-<td class=""> The date the order was last modified. </td>
+<td > date_modified </td>
+<td > date </td>
+<td > The date the order was last modified. </td>
 </tr>
 
 <tr>
-<td class=""> subtotal_ex_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The subtotal of the order excluding tax. </td>
+<td > subtotal_ex_tax </td>
+<td > decimal  </td>
+<td > The subtotal of the order excluding tax. </td>
 </tr>
 
 <tr>
-<td class=""> subtotal_inc_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The subtotal of the order including tax. </td>
+<td > subtotal_inc_tax </td>
+<td > decimal  </td>
+<td > The subtotal of the order including tax. </td>
 </tr>
 
 <tr>
-<td class=""> subtotal_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The amount of tax on the subtotal. </td>
+<td > subtotal_tax </td>
+<td > decimal  </td>
+<td > The amount of tax on the subtotal. </td>
 </tr>
 
 <tr>
-<td class=""> total_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total tax for the order. </td>
+<td > total_tax </td>
+<td > decimal  </td>
+<td > The total tax for the order. </td>
 </tr>
 
 <tr>
-<td class=""> base_shipping_cost </td>
-<td class=""> decimal  </td>
-<td class=""> The base shipping cost of the order. The base shipping cost is the sum of all of the shipping costs minus any discount amounts to the shipping costs. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting.The base shipping * cost is the sum of all of the base shipping costs on each address. A * base shipping cost is a price entered by the store owner, either inc or * ex tax. </td>
+<td > base_shipping_cost </td>
+<td > decimal  </td>
+<td > The base shipping cost of the order. The base shipping cost is the sum of all of the shipping costs minus any discount amounts to the shipping costs. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting.The base shipping * cost is the sum of all of the base shipping costs on each address. A * base shipping cost is a price entered by the store owner, either inc or * ex tax. </td>
 </tr>
 
 <tr>
-<td class=""> shipping_cost_ex_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total shipping cost of the order excluding tax. </td>
+<td > shipping_cost_ex_tax </td>
+<td > decimal  </td>
+<td > The total shipping cost of the order excluding tax. </td>
 </tr>
 
 <tr>
-<td class=""> shipping_cost_inc_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total shipping cost of the order including tax. </td>
+<td > shipping_cost_inc_tax </td>
+<td > decimal  </td>
+<td > The total shipping cost of the order including tax. </td>
 </tr>
 
 <tr>
-<td class=""> shipping_cost_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total tax for the shipping cost. </td>
+<td > shipping_cost_tax </td>
+<td > decimal  </td>
+<td > The total tax for the shipping cost. </td>
 </tr>
 
 <tr>
-<td class=""> shipping_cost_tax_class_id </td>
-<td class=""> int </td>
-<td class=""> The ID of the tax class used for taxing shipping costs. </td>
+<td > shipping_cost_tax_class_id </td>
+<td > int </td>
+<td > The ID of the tax class used for taxing shipping costs. </td>
 </tr>
 
 <tr>
-<td class=""> base_handling_cost </td>
-<td class=""> decimal  </td>
-<td class=""> The base handling cost of the order. The base handling cost is the sum of the all the handling costs. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting. </td>
+<td > base_handling_cost </td>
+<td > decimal  </td>
+<td > The base handling cost of the order. The base handling cost is the sum of the all the handling costs. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting. </td>
 </tr>
 
 <tr>
-<td class=""> handling_cost_ex_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The handling cost of the order excluding tax. </td>
+<td > handling_cost_ex_tax </td>
+<td > decimal  </td>
+<td > The handling cost of the order excluding tax. </td>
 </tr>
 
 <tr>
-<td class=""> handling_cost_inc_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The handing cost of the order including tax. </td>
+<td > handling_cost_inc_tax </td>
+<td > decimal  </td>
+<td > The handing cost of the order including tax. </td>
 </tr>
 
 <tr>
-<td class=""> handling_cost_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total tax for the handling cost. </td>
+<td > handling_cost_tax </td>
+<td > decimal  </td>
+<td > The total tax for the handling cost. </td>
 </tr>
 
 <tr>
-<td class=""> handling_cost_tax_class_id </td>
-<td class=""> int </td>
-<td class=""> The ID of the tax class used for taxing handling costs. </td>
+<td > handling_cost_tax_class_id </td>
+<td > int </td>
+<td > The ID of the tax class used for taxing handling costs. </td>
 </tr>
 
 <tr>
-<td class=""> base_wrapping_cost </td>
-<td class=""> decimal  </td>
-<td class=""> The base wrapping cost of the order. The base wrapping cost is the sum of all the wrapping costs on the items. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting. </td>
+<td > base_wrapping_cost </td>
+<td > decimal  </td>
+<td > The base wrapping cost of the order. The base wrapping cost is the sum of all the wrapping costs on the items. It may be inc or ex tax depending on the "Prices Entered With Tax?" tax setting. </td>
 </tr>
 
 <tr>
-<td class=""> wrapping_cost_ex_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The wrapping cost of the order including tax. </td>
+<td > wrapping_cost_ex_tax </td>
+<td > decimal  </td>
+<td > The wrapping cost of the order including tax. </td>
 </tr>
 
 <tr>
-<td class=""> wrapping_cost_inc_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The wrapping cost of the order excluding tax. </td>
+<td > wrapping_cost_inc_tax </td>
+<td > decimal  </td>
+<td > The wrapping cost of the order excluding tax. </td>
 </tr>
 
 <tr>
-<td class=""> wrapping_cost_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total tax for the wrapping cost. </td>
+<td > wrapping_cost_tax </td>
+<td > decimal  </td>
+<td > The total tax for the wrapping cost. </td>
 </tr>
 
 <tr>
-<td class=""> wrapping_cost_tax_class_id </td>
-<td class=""> int </td>
-<td class=""> The ID of the tax class used for taxing wrapping costs. </td>
+<td > wrapping_cost_tax_class_id </td>
+<td > int </td>
+<td > The ID of the tax class used for taxing wrapping costs. </td>
 </tr>
 
 <tr>
-<td class=""> total_ex_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total of the order excluding tax. </td>
+<td > total_ex_tax </td>
+<td > decimal  </td>
+<td > The total of the order excluding tax. </td>
 </tr>
 
 <tr>
-<td class=""> total_inc_tax </td>
-<td class=""> decimal  </td>
-<td class=""> The total of the order including tax. </td>
+<td > total_inc_tax </td>
+<td > decimal  </td>
+<td > The total of the order including tax. </td>
 </tr>
 
 <tr>
-<td class=""> status_id </td>
-<td class=""> int </td>
-<td class=""> The status of the order. A list of available statuses can be retrieved from <a href="/display/API/Order+Statuses">Order Statuses</a> </td>
+<td > status_id </td>
+<td > int </td>
+<td > The status of the order. A list of available statuses can be retrieved from <a href="/display/API/Order+Statuses">Order Statuses</a> </td>
 </tr>
 
 <tr>
-<td class=""> status  </td>
-<td class=""> string  </td>
-<td class=""> The textual description of the status.  </td>
+<td > status  </td>
+<td > string  </td>
+<td > The textual description of the status.  </td>
 </tr>
 
 <tr>
-<td class=""> items_total </td>
-<td class=""> int </td>
-<td class=""> The total quantity of the items (sum of products * quantity) in the order. </td>
+<td > items_total </td>
+<td > int </td>
+<td > The total quantity of the items (sum of products * quantity) in the order. </td>
 </tr>
 
 <tr>
-<td class=""> items_shipped </td>
-<td class=""> int  </td>
-<td class=""> The quantity of items that have been shipped. </td>
+<td > items_shipped </td>
+<td > int  </td>
+<td > The quantity of items that have been shipped. </td>
 </tr>
 
 <tr>
-<td class=""> payment_method </td>
-<td class=""> string </td>
-<td class=""> The payment method used for the order. </td>
+<td > payment_method </td>
+<td > string </td>
+<td > The payment method used for the order. </td>
 </tr>
 
 <tr>
-<td class=""> payment_provider_id </td>
-<td class=""> string </td>
-<td class=""> The ID or reference number of a payment from the payment provider/gateway. </td>
+<td > payment_provider_id </td>
+<td > string </td>
+<td > The ID or reference number of a payment from the payment provider/gateway. </td>
 </tr>
 
 <tr>
-<td class=""> payment_status </td>
-<td class=""> enum </td>
-<td class=""> The status of the payment. A payment status may be one of the following, depending on the payment method used: 
+<td > payment_status </td>
+<td > enum </td>
+<td > The status of the payment. A payment status may be one of the following, depending on the payment method used: 
 <ul>
   <li>authorized</li>
   <li>captured</li>
@@ -509,143 +509,143 @@ A full list of allowed fields is described below.
 </tr>
 
 <tr>
-<td class=""> refunded_amount </td>
-<td class=""> decimal  </td>
-<td class=""> The amount that that has been refunded for the order. </td>
+<td > refunded_amount </td>
+<td > decimal  </td>
+<td > The amount that that has been refunded for the order. </td>
 </tr>
 
 <tr>
-<td class=""> order_is_digital </td>
-<td class=""> boolean </td>
-<td class=""> Indicates if the order contains purely digital delivery products. </td>
+<td > order_is_digital </td>
+<td > boolean </td>
+<td > Indicates if the order contains purely digital delivery products. </td>
 </tr>
 
 <tr>
-<td class=""> date_shipped </td>
-<td class=""> date </td>
-<td class=""> The date the order was shipped. </td>
+<td > date_shipped </td>
+<td > date </td>
+<td > The date the order was shipped. </td>
 </tr>
 
 <tr>
-<td class=""> store_credit_amount </td>
-<td class=""> decimal  </td>
-<td class=""> The amount of store credit the customer used to pay for the order. </td>
+<td > store_credit_amount </td>
+<td > decimal  </td>
+<td > The amount of store credit the customer used to pay for the order. </td>
 </tr>
 
 <tr>
-<td class=""> gift_certificate_amount </td>
-<td class=""> decimal  </td>
-<td class=""> The amount of a gift certificate the customer used to pay for the order. </td>
+<td > gift_certificate_amount </td>
+<td > decimal  </td>
+<td > The amount of a gift certificate the customer used to pay for the order. </td>
 </tr>
 
 <tr>
-<td class=""> ip_address </td>
-<td class=""> string </td>
-<td class=""> The IP address of the user that placed the order. </td>
+<td > ip_address </td>
+<td > string </td>
+<td > The IP address of the user that placed the order. </td>
 </tr>
 
 <tr>
-<td class=""> geoip_country </td>
-<td class=""> string </td>
-<td class=""> The country the order was placed from as determined by GeoIP location. </td>
+<td > geoip_country </td>
+<td > string </td>
+<td > The country the order was placed from as determined by GeoIP location. </td>
 </tr>
 
 <tr>
-<td class=""> geoip_country_iso2 </td>
-<td class=""> country code </td>
-<td class=""> The country code of the geoip_country field. </td>
+<td > geoip_country_iso2 </td>
+<td > country code </td>
+<td > The country code of the geoip_country field. </td>
 </tr>
 
 <tr>
-<td class=""> currency_id </td>
-<td class=""> int </td>
+<td > currency_id </td>
+<td > int </td>
 
-<td class=""> The ID of the currency used by the customer to place the order. </td>
+<td > The ID of the currency used by the customer to place the order. </td>
 </tr>
 
 <tr>
-<td class=""> currency_code </td>
-<td class=""> string(3) </td>
-<td class=""> The 3 letter currency code of the currency used to place the order. (Store version 7.3.6+) </td>
+<td > currency_code </td>
+<td > string(3) </td>
+<td > The 3 letter currency code of the currency used to place the order. (Store version 7.3.6+) </td>
 </tr>
 
 <tr>
-<td class=""> default_currency_id </td>
-<td class=""> int </td>
-<td class=""> The ID of the store's default currency at the time of the order. </td>
+<td > default_currency_id </td>
+<td > int </td>
+<td > The ID of the store's default currency at the time of the order. </td>
 </tr>
 
 <tr>
-<td class=""> default_currency_code  </td>
-<td class=""> string  </td>
-<td class=""> The 3 letter currency code of the store's default currency at the time of the order. (Store version 7.3.6+)  </td>
+<td > default_currency_code  </td>
+<td > string  </td>
+<td > The 3 letter currency code of the store's default currency at the time of the order. (Store version 7.3.6+)  </td>
 </tr>
 
 <tr>
-<td class=""> currency_exchange_rate </td>
-<td class=""> decimal </td>
-<td class=""> The exchange rate of the currency used to place the order. </td>
+<td > currency_exchange_rate </td>
+<td > decimal </td>
+<td > The exchange rate of the currency used to place the order. </td>
 </tr>
 
 <tr>
-<td class=""> staff_notes </td>
-<td class=""> text </td>
-<td class=""> Staff notes on the order. </td>
+<td > staff_notes </td>
+<td > text </td>
+<td > Staff notes on the order. </td>
 </tr>
 
 <tr>
-<td class=""> customer_message </td>
-<td class=""> text </td>
-<td class=""> An order message left by the customer when placing the order. </td>
+<td > customer_message </td>
+<td > text </td>
+<td > An order message left by the customer when placing the order. </td>
 </tr>
 
 <tr>
-<td class=""> discount_amount </td>
-<td class=""> decimal </td>
-<td class=""> The total discounts applied to the order, excluding coupons. </td>
+<td > discount_amount </td>
+<td > decimal </td>
+<td > The total discounts applied to the order, excluding coupons. </td>
 </tr>
 
 <tr>
-<td class=""> shipping_address_count </td>
-<td class=""> int </td>
-<td class=""> The amount of addresses that items were shipped to for the order. </td>
+<td > shipping_address_count </td>
+<td > int </td>
+<td > The amount of addresses that items were shipped to for the order. </td>
 </tr>
 
 <tr>
-<td class=""> coupon_discount </td>
-<td class=""> decimal </td>
-<td class=""> The total discount given on the order due to applied coupons. </td>
+<td > coupon_discount </td>
+<td > decimal </td>
+<td > The total discount given on the order due to applied coupons. </td>
 </tr>
 
 <tr>
-<td class=""> is_deleted </td>
-<td class=""> boolean </td>
-<td class=""> Indicates if the order was deleted (archived). </td>
+<td > is_deleted </td>
+<td > boolean </td>
+<td > Indicates if the order was deleted (archived). </td>
 </tr>
 
 <tr>
-<td class=""> billing_address  </td>
-<td class=""> object  </td>
-<td class=""> The address that the order is billed to. See the Billing Address section below for a definition of this object.  </td>
+<td > billing_address  </td>
+<td > object  </td>
+<td > The address that the order is billed to. See the Billing Address section below for a definition of this object.  </td>
 </tr>
 
 <tr>
-<td class=""> shipping_addresses  </td>
-<td class=""> resource   </td>
-<td class=""> The address (or addresses if multi-address shipping was used) that the products were shipped to. See the Shipping Addresses resource for details.   
+<td > shipping_addresses  </td>
+<td > resource   </td>
+<td > The address (or addresses if multi-address shipping was used) that the products were shipped to. See the Shipping Addresses resource for details.   
 NB. Purely digital delivery orders will not have any shipping addresses. </td>
 </tr>
 
 <tr>
-<td class=""> products  </td>
-<td class=""> resource   </td>
-<td class=""> The list of products purchased in the order. See the Products sub-resource for a definition of this object.  </td>
+<td > products  </td>
+<td > resource   </td>
+<td > The list of products purchased in the order. See the Products sub-resource for a definition of this object.  </td>
 </tr>
 
 <tr>
-<td class=""> coupons  </td>
-<td class=""> resource   </td>
-<td class=""> A list of coupons applied to the order. See the Coupons resource for details. </td>
+<td > coupons  </td>
+<td > resource   </td>
+<td > A list of coupons applied to the order. See the Coupons resource for details. </td>
 </tr>
 
 </tbody>

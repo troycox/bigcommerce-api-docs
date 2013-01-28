@@ -120,19 +120,19 @@ tr.mandatory {
    </tr>
   </thead>
   <tbody>
-   <tr class="">
+   <tr >
      <td >tracking_number</td>
      <td>string</td>
      
      <td>Tracking number of the shipment</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >order_date</td>
      <td>date</td>
      
      <td>Date when the order was placed</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >comments</td>
      <td>text</td>
      
@@ -294,25 +294,25 @@ This PUT request takes following parameters.
    </tr>
   </thead>
   <tbody>
-   <tr class="">
+   <tr >
      <td >tracking_number</td>
      <td>string</td>
      
      <td>Tracking number of the shipment</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >order_date</td>
      <td>date</td>
      
      <td>Date when the order was placed</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >comments</td>
      <td>text</td>
      
      <td>Comments the shipper wishes to add</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >order_address_id</td>
      <td>int</td>
      

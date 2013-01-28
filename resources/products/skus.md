@@ -55,56 +55,56 @@ This GET request returns all the SKUs by default. It can be filtered by followin
    </tr>
   </thead>
   <tbody>
-   <tr class="">
+   <tr >
      <td >min_id</td>
      <td>integer</td>
      
      <td>The min sku ID</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >max_id</td>
      <td>integer</td>
      
      <td>The max sku ID</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >sku</td>
      <td>string</td>
      
      <td>The unique sku</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >upc</td>
      <td>string</td>
      
      <td>The upc for the product combination</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_level</td>
      <td>int</td>
      
      <td>The inventory level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_warning_level</td>
      <td>int</td>
      
      <td>The inventory warning level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >bin_picking_number</td>
      <td>string</td>
      
      <td>The BIN picking number</td>
    </tr>
    
-   <tr class="">
+   <tr >
      <td >min_inventory_level</td>
      <td>integer</td>
      
      <td>The min inventory level</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >max_inventory_level</td>
      <td>integer</td>
      
@@ -191,31 +191,31 @@ tr.mandatory {
      
      <td>The unique sku</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >upc</td>
      <td>string</td>
      
      <td>The upc for the product combination</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >cost_price</td>
      <td>decimal</td>
      
      <td>The cost price of the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_level</td>
      <td>int</td>
      
      <td>The inventory level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_warning_level</td>
      <td>int</td>
      
      <td>The inventory warning level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >bin_picking_number</td>
      <td>string</td>
      
@@ -304,31 +304,31 @@ This PUT request takes following parameters.
      
      <td>The unique sku</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >upc</td>
      <td>string</td>
      
      <td>The upc for the product combination</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >cost_price</td>
      <td>decimal</td>
      
      <td>The cost price of the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_level</td>
      <td>int</td>
      
      <td>The inventory level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >inventory_warning_level</td>
      <td>int</td>
      
      <td>The inventory warning level for the product</td>
    </tr>
-   <tr class="">
+   <tr >
      <td >bin_picking_number</td>
      <td>string</td>
      

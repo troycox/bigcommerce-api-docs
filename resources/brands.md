@@ -200,7 +200,7 @@ This PUT request takes following parameters.
  </thead>
  <tbody>
    
-<tr class="">
+<tr >
   <td >name</td>
   <td>string</td>
 
@@ -221,7 +221,7 @@ This PUT request takes following parameters.
   <td>text</td>
   <td>A meta description to include</td>
 </tr>
-<tr class="">
+<tr >
   <td >image_file</td>
   <td>string</td>
   <td>A valid image</td>

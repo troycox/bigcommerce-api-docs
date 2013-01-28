@@ -152,21 +152,21 @@ tr.mandatory {
      <td>The id of the option this optionset refers to</td>
    </tr>
    
-   <tr class="">
+   <tr >
      <td>display_name</td>
      <td>string</td>
      
      <td>The friendly name used for this optionset</td>
    </tr>
 
-   <tr class="">
+   <tr >
      <td>sort_order</td>
      <td>integer</td>
      
      <td>The order in which the option is displayed on the product page</td>
    </tr>
 
-   <tr class="">
+   <tr >
      <td>is_required</td>
      <td>boolean</td>
      
@@ -226,21 +226,21 @@ This PUT request takes following parameters.
   </thead>
   <tbody>
    
-   <tr class="">
+   <tr >
      <td>display_name</td>
      <td>string</td>
      
      <td>The friendly name used for this optionset</td>
    </tr>
 
-   <tr class="">
+   <tr >
      <td>sort_order</td>
      <td>integer</td>
      
      <td>The order in which the option is displayed on the product page</td>
    </tr>
 
-   <tr class="">
+   <tr >
      <td>is_required</td>
      <td>boolean</td>
      

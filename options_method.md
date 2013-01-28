@@ -15,38 +15,38 @@ It is important to note that the methods and fields described by OPTIONS will mo
 
 ## Fields
 
-<table class=""><thead><tr class="">
-<th class="" data-column="0"><div class="tablesorter-header-inner"><p> API Field </p></div></th>
-<th class="" data-column="1"><div class="tablesorter-header-inner"><p> API Data Type </p></div></th>
-<th class="" data-column="2"><div class="tablesorter-header-inner"><p> Field Description </p></div></th>
+<table ><thead><tr >
+<th  data-column="0"><div class="tablesorter-header-inner"><p> API Field </p></div></th>
+<th  data-column="1"><div class="tablesorter-header-inner"><p> API Data Type </p></div></th>
+<th  data-column="2"><div class="tablesorter-header-inner"><p> Field Description </p></div></th>
 </tr></thead><tbody>
 
 <tr>
-<td class=""><p> name </p></td>
-<td class=""><p> string </p></td>
-<td class=""><p> The name of the API field being described. This name maps directly to the input and output fields for the resource. </p></td>
+<td ><p> name </p></td>
+<td ><p> string </p></td>
+<td ><p> The name of the API field being described. This name maps directly to the input and output fields for the resource. </p></td>
 </tr>
 <tr>
-<td class=""><p> type </p></td>
-<td class=""><p> string </p></td>
-<td class=""><p> The API Data Type of the field being described. The types referred to by this field can be seen in the <a href="/display/API/Data+Types">Data Types</a> documentation. </p></td>
+<td ><p> type </p></td>
+<td ><p> string </p></td>
+<td ><p> The API Data Type of the field being described. The types referred to by this field can be seen in the <a href="/display/API/Data+Types">Data Types</a> documentation. </p></td>
 </tr>
 <tr>
-<td class=""><p> length </p></td>
-<td class=""><p> int | string </p></td>
-<td class=""><p> For types which are limited in length, this described the length limitation of this field. For example, a string field with a length of 50 will only accept up to 50 characters, while a decimal field with a length of "20,4" will only accept numbers up to 20 total digits (including the digits after the decimal point). For more information, please refer to the <a href="/display/API/Data+Types">Data Types</a> documentation. <br class="atl-forced-newline">
+<td ><p> length </p></td>
+<td ><p> int | string </p></td>
+<td ><p> For types which are limited in length, this described the length limitation of this field. For example, a string field with a length of 50 will only accept up to 50 characters, while a decimal field with a length of "20,4" will only accept numbers up to 20 total digits (including the digits after the decimal point). For more information, please refer to the <a href="/display/API/Data+Types">Data Types</a> documentation. <br class="atl-forced-newline">
 <br class="atl-forced-newline">
 The length will not be present for field types where the length is not applicable (such as text fields and the various integer types). </p></td>
 </tr>
 <tr>
-<td class=""><p> writable_methods </p></td>
-<td class=""><p> array </p></td>
-<td class=""><p> A list of HTTP methods for which this field can be written to. This list may be empty for fields which are completely read-only - the <code>id</code> field is a typical example of this. </p></td>
+<td ><p> writable_methods </p></td>
+<td ><p> array </p></td>
+<td ><p> A list of HTTP methods for which this field can be written to. This list may be empty for fields which are completely read-only - the <code>id</code> field is a typical example of this. </p></td>
 </tr>
 <tr>
-<td class=""><p> required_methods </p></td>
-<td class=""><p> array </p></td>
-<td class=""><p> A list of HTTP methods for which this field is a required field. For example, the <code>name</code> field on the <code>brands</code> resource is required for <code>POST</code> requests. </p></td>
+<td ><p> required_methods </p></td>
+<td ><p> array </p></td>
+<td ><p> A list of HTTP methods for which this field is a required field. For example, the <code>name</code> field on the <code>brands</code> resource is required for <code>POST</code> requests. </p></td>
 </tr>
 </tbody></table>
 
