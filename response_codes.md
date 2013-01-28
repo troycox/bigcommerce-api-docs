@@ -4,7 +4,7 @@ The API responds to requests with different HTTP status codes depending on the r
 ## 2xx Success
 These codes are returned for requests that were understood and processed successfully.
 
-<table ><thead><tr >
+<table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div class="tablesorter-header-inner"><p> Code </p></div></th>
 <th  data-column="1"><div class="tablesorter-header-inner"><p> Definition </p></div></th>
 <th  data-column="2"><div class="tablesorter-header-inner"><p> Purpose </p></div></th>
@@ -34,7 +34,7 @@ These codes are returned for requests that were understood and processed success
 
 ## 3xx Redirection
 These codes are returned for requests that have resulted in the client needing to take further action to complete the request.
-<table ><thead><tr >
+<table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div class="tablesorter-header-inner"><p> Code </p></div></th>
 <th  data-column="1"><div class="tablesorter-header-inner"><p> Definition </p></div></th>
 <th  data-column="2"><div class="tablesorter-header-inner"><p> Purpose </p></div></th>
@@ -58,7 +58,7 @@ These codes are returned for requests that have resulted in the client needing t
 </tbody></table>
 
 ## 4xx Client Error
-<table ><thead><tr >
+<table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div class="tablesorter-header-inner"><p> Code </p></div></th>
 <th  data-column="1"><div class="tablesorter-header-inner"><p> Definition </p></div></th>
 <th  data-column="2"><div class="tablesorter-header-inner"><p> Purpose </p></div></th>
@@ -113,7 +113,7 @@ These codes are returned for requests that have resulted in the client needing t
 
 ## 5xx Server Error
 These codes are returned for requests that could not be processed due to an internal error with the API or server.
-<table ><thead><tr >
+<table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div class="tablesorter-header-inner"><p> Code </p></div></th>
 <th  data-column="1"><div class="tablesorter-header-inner"><p> Definition </p></div></th>
 <th  data-column="2"><div class="tablesorter-header-inner"><p> Purpose </p></div></th>

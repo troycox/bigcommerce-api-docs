@@ -15,7 +15,7 @@ It is important to note that the methods and fields described by OPTIONS will mo
 
 ## Fields
 
-<table ><thead><tr >
+<table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div class="tablesorter-header-inner"><p> API Field </p></div></th>
 <th  data-column="1"><div class="tablesorter-header-inner"><p> API Data Type </p></div></th>
 <th  data-column="2"><div class="tablesorter-header-inner"><p> Field Description </p></div></th>
