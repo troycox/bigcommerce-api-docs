@@ -8,20 +8,20 @@
  <tbody>
    <tr>
      <td><a href="#get-countriesjson">GET  /countries.json</a></td>
-     
+
    </tr>
    <tr>
      <td><a href="#get-countriesidjson">GET /countries/id.json</a></td>
-     
+
    </tr>
    <tr>
      <td><a href="#get-countriescountjson">GET /countries/count.json</a></td>
-     
+
    </tr>
-   
+
  </tbody>
 </table>
-   
+
 ## Description
 ### GET countries.json
 GET countries from a store
@@ -41,23 +41,23 @@ These fields can be used to filter the query. By default, without any filters, t
    <tr>
      <td>country</td>
      <td>string</td>
-     
+
      <td>Country name</td>
    </tr>
    <tr>
      <td>country_iso2</td>
      <td>string</td>
-     
+
      <td>2 letter countryt code</td>
    </tr>
 
    <tr>
      <td>country_iso3</td>
      <td>string</td>
-     
+
      <td>3 letter country code</td>
    </tr>
-   
+
   </tbody>
 </table>
 
@@ -109,7 +109,7 @@ country by ID
         "resource": "/countries/226/states"
     }
 }
-</pre>    
+</pre>
 
 
 ### GET countries/count.json
@@ -119,7 +119,7 @@ Get a total number of countries in the store
 This request does not take any parameters.
 
 #### Response
-Returns the number of countries in the store 
+Returns the number of countries in the store
 <pre>
   {
     "count": 10
