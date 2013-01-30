@@ -461,7 +461,7 @@ A full list of allowed fields is described below.
 <tr>
 <td > status_id </td>
 <td > int </td>
-<td > The status of the order. A list of available statuses can be retrieved from <a href="/display/API/Order+Statuses">Order Statuses</a> </td>
+<td > The status of the order. A list of available statuses can be retrieved from Order Statuses resource </td>
 </tr>
 
 <tr>
