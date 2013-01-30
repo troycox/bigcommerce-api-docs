@@ -422,10 +422,11 @@ A successful put udpates a coupon in the store and responds with the entire coup
 </pre>
 
 
+Here are resources to delete coupons. This is a destructive operation. Remember that you cannot recover deleted coupons.
+
+### DELETE coupons.json
+DELETE all coupons
+
 ### DELETE coupons/id.json
-
-#### Request
-
-#### Response
-
+DELETE a coupon
 
