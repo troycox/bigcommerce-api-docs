@@ -259,7 +259,7 @@ The POST request allows following fields. Mandatory fields are in bold.
    <tr>
      <td>expires</td>
      <td>date</td>
-     <td>This is a date field which specifies when a coupon expires. Coupons need not have an expiry date as you can also control expiry via max_uses and max_uses_per_customer. The date field must be formatted as per [RFC-2822](http://tools.ietf.org/html/rfc2822#section-3.3).</td>
+     <td>This is a date field which specifies when a coupon expires. Coupons need not have an expiry date as you can also control expiry via max_uses and max_uses_per_customer. The date field must be formatted as per <a href="http://tools.ietf.org/html/rfc2822#section-3.3">RFC-2822</a>.</td>
    </tr>
 
    <tr>
@@ -312,7 +312,7 @@ The POST request allows following fields. Mandatory fields are in bold.
 }
 </pre>
      </li>
-     <li>If a coupon is restricted by zip codes then a list of zip codes indexed by the ISO2 country code for each country is provided as follows. Please refer to this [KB article](http://www.viewkb.com/inlinehelp.php?searchOverride=86&tplHeader=Bigcommerce&helpid=850)
+     <li>If a coupon is restricted by zip codes then a list of zip codes indexed by the ISO2 country code for each country is provided as follows. Please refer to this <a href="http://www.viewkb.com/inlinehelp.php?searchOverride=86&tplHeader=Bigcommerce&helpid=850">KB article</a>
 <pre>
 "restricted_to": {
     "zips": {
