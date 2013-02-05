@@ -313,7 +313,7 @@ List of products
 Create products in a store
 
 #### Request
-The POST request allows following fields. Mandatory fields are styled blue.
+The POST request allows following fields. Mandatory fields are styled blue. Please note that when creating products via API, the is_visible field defaults to false. You need to explicitly set this field to true or else the product won't be visible in the store.
 <style type="text/css">
 tr.mandatory {
   color: aliceblue;
