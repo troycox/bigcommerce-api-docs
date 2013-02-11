@@ -67,6 +67,18 @@ These fields can be used to filter the query. By default, without any filters, t
      <td>The maximum ID of the product</td>
    </tr>
    <tr>
+     <td>limit</td>
+     <td>integer</td>
+     
+     <td>The number of products your query should return (the max is 200 per page)</td>
+   </tr>
+   <tr>
+     <td>page</td>
+     <td>integer</td>
+     
+     <td>The page number of the results. If you have say 300 products, you can use the page=1&limit=200 to get the first 200 products and increment the page counter to get the next 100.</td>
+   </tr>
+   <tr>
      <td>name</td>
      <td>string</td>
      
