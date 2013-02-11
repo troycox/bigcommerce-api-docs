@@ -328,7 +328,7 @@ The POST request allows following fields. Mandatory fields are in bold.
    <tr>
      <td>shipping_methods</td>
      <td>array</td>
-     <td>This is a list of shipping method names. If a shipping method isn't enabled on the store it can't be used to with a coupon. To check which shipping methods are enabled please do a GET request on the /shippingmethods.json endpoint.</td>
+     <td>This is a list of shipping method names. If a shipping method isn't enabled on the store it can't be used to with a coupon. To check which shipping methods are enabled please do a GET request on the /shipping/methods.json endpoint.</td>
    </tr>
 
  </tbody>
