@@ -1,5 +1,5 @@
 ## Bigcommerce Webhooks Quickstart
-This document prevents an overview on what webhooks are and how how you can use it with a Bigcommerce store.
+This document presents an overview on what webhooks are and how how you can use it with a Bigcommerce store.
 
 ### Webhooks
 Think push notification for the web. Assume you want to track various events that occurs in a Bigcommerce store - checkout, order, price change, shipping events, etc. You might have built a kick-ass backend service that can act on these events and run some sort of script and analytics. Webhooks enable you to accomplish this.
