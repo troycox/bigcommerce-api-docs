@@ -31,15 +31,16 @@
   * tax price
   * url
 - When a review is added to a product
-- When product inventory is changed in stone edge module
-- When product inventory is changed because of a purchase
+- When product inventory is changed via the Stone Edge module
+- When product inventory is changed as a result of a purchase
 
-__Note**__ _At this point in time, changes timeo product options will not trigger a store/product/updated event._
+__Note**__ _At this point in time, changes to product options will not trigger a store/product/updated event._
 
 
 ### store/product/deleted
 
 - When a product is deleted from the control panel
+- When a product is deleted via the API
 
 ## Customers
 
