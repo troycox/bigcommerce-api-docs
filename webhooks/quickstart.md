@@ -8,7 +8,7 @@ Think push notification for the web. Assume you want to track various events tha
 In a nutshell, you are telling Bigcommerce to notify you when an event occurs in a Bigcommerce store. For this notification to be successful, you provide a script hosted on your web servers (potentially being part of your existing web app).
 
 #### Endpoint
-Currently the beta test endpoint for webhooks is at https://bc-hooks-manager-staging.herokuapp.com
+Currently the beta test endpoint for webhooks is at https://hooks-beta.bigcommerce.com
 
 #### Events/Scopes currently available
 1. store/order/* (all events on the order resource)
@@ -36,7 +36,7 @@ A client ID and secret will be created for you in your dashboard as shown in the
 Once you have provisioned webhooks, you can start subscribing to events from the above events list. However, before doing that, you need an 'access_token'. You can generate the access token via a POST request on the /token endpoint. The POST request will contain the fields - client_id, client_secret, user, token, store_domain. The client_id and client_secret are provided to you by the dev portal where as user, token and store_domain are your API credentials that you have traditionally used to make API requests.
 
 <pre>
-   curl -XPOST -d '{"client_id":"client123","client_secret":"client123secret","user":"admin","token":"xxxx","store_domain":"https://store-xxxx.mybigcommerce.com"}' https://bc-hooks-manager-staging.herokuapp.com/token 
+   curl -XPOST -d '{"client_id":"client123","client_secret":"client123secret","user":"admin","token":"xxxx","store_domain":"https://store-xxxx.mybigcommerce.com"}' https://hooks-beta.bigcommerce.com/token 
 </pre>
 
 This will provide a response that contains the access_token and a producer, which is the same as the store id.
@@ -48,7 +48,7 @@ This will provide a response that contains the access_token and a producer, whic
 To subscribe to events you would make a POST request with the following fields - producer, scope, deliverymethod, destination. You also need to define two header fields <code>X_AUTH_CLIENT_ID</code> whose value will be the client_id you generated for your app via the Dev Portal (as described above) and <code>X_AUTH_TOKEN</code> which has the above generated access_token's value.
 
 <pre>
-    curl -XPOST -d '{"producer":"store/xxxx","scope":"products/*","deliverymethod":"HTTP_POST","destination":{"url":"http://requestb.in/nf4nqbnf"}}' -H 'X_AUTH_CLIENT_ID: client123' -H 'X_AUTH_TOKEN: 12345' https://bc-hooks-manager-staging.herokuapp.com
+    curl -XPOST -d '{"producer":"store/xxxx","scope":"products/*","deliverymethod":"HTTP_POST","destination":{"url":"http://requestb.in/nf4nqbnf"}}' -H 'X_AUTH_CLIENT_ID: client123' -H 'X_AUTH_TOKEN: 12345' https://hooks-beta.bigcommerce.com
 </pre>
 
 The above example demonstrates how you can subscribe for product updates. Make a note of the "destination" field in the request. This is a JSON object containing a "url" field. Make sure you point this to the location where Bigcommerce sends you notifications. If everything goes well, you will see the following response -
