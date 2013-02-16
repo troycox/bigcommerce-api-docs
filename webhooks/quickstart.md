@@ -1,6 +1,7 @@
 ## Bigcommerce Webhooks Quickstart
-=======
-This document presents an overview on what webhooks are and how how you can use it with a Bigcommerce store.
+
+#### Currently in beta
+Webhoooks is currently in beta and access is by invite only. If you have a strong use case and require access to webhooks, please get in touch with us.
 
 ### Webhooks
 Think push notification for the web. Assume you want to track various events that occur in a Bigcommerce store - checkout, order, price change, shipping events, etc. You might have built a kick-ass backend service that can act on these events and run some sort of script and analytics. Webhooks enable you to accomplish this.
@@ -27,7 +28,7 @@ Currently the beta test endpoint for webhooks is at https://hooks-beta.bigcommer
 13. store/app/uninstalled
 
 ### Provisioning webhooks
-Currently webhoooks is in beta and access is by invite only. If you have a strong use case and require access to webhooks, please get in touch with us. When you navigate to https://devportal.bigcommerce.com/beta/wehooks you will be able to provision webhooks for your account. 
+When you navigate to https://devportal.bigcommerce.com/beta/wehooks you will be able to provision webhooks for your account. 
 
 ![Image](images/webhooks_provision.png?raw=true) 
 
