@@ -26,6 +26,8 @@ Currently the beta test endpoint for webhooks is at https://hooks-beta.bigcommer
 12. store/customer/deleted
 13. store/app/uninstalled
 
+<a href="/api/event_triggers.md">This page</a> describes in detail the specific triggers for each of the event scopes.
+
 ### Provisioning webhooks
 Currently webhoooks is in beta and access is by invite only. If you have a strong use case and require access to webhooks, please get in touch with us. When you navigate to https://devportal.bigcommerce.com/beta/wehooks you will be able to provision webhooks for your account. 
 
@@ -61,4 +63,4 @@ The above example demonstrates how you can subscribe for product updates. Make a
 
 1. In the postback, we send a light payload with only minimum details regarding the events that got triggered. It's up to you how you want to handle the notification in your application. For instance, we will send you details indicating that a product was updated, and you might want to handle it by fetching the new product via an API call.
 2. Bulk data imports will trigger the relevant events for every record affected. For example, if you have a hook on store/product/create and then the merchant imports 2,000 products, then there will be 2,000 event postbacks. 
-3. Payloads are serialized per hook per store. We are looking at enabling a replay feature down the road. What this means is, based on the serialized payload IDs, 3rd parties can detect if they've missed certain postbacks and then they, via a futuer update, you will be able call a replay method to get the missing events. 
+3. Payloads are serialized per hook per store. We are looking at enabling a replay feature down the road. What this means is, based on the serialized payload IDs, 3rd parties can detect if they've missed certain postbacks and then they, via a future update, you will be able call a replay method to get the missing events. 
