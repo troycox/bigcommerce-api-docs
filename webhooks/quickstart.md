@@ -27,7 +27,7 @@ Currently the beta test endpoint for webhooks is at https://hooks-beta.bigcommer
 12. store/customer/deleted
 13. store/app/uninstalled
 
-<a href="/api/event_triggers.md">This page</a> describes in detail the specific triggers for each of the event scopes.
+<a href="/api/webhooks/event_triggers">This page</a> describes in detail the specific triggers for each of the event scopes.
 
 ### Provisioning webhooks
 When you navigate to https://devportal.bigcommerce.com/beta/wehooks you will be able to provision webhooks for your account. 
