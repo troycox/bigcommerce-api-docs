@@ -1,14 +1,14 @@
-# Events Triggers
+## Events Triggers
 
-## Products
+### Products
 
-### store/product/created
+#### store/product/created
 
 - When a product is created from the control panel
 - When a product is created from product import
 - When a product is created via the API
 
-### store/product/updated
+#### store/product/updated
 
 - When a product is changed in the control panel
 - When a product is updated via the API
@@ -37,44 +37,44 @@
 __Note**__ _At this point in time, changes to product options will not trigger a store/product/updated event._
 
 
-### store/product/deleted
+#### store/product/deleted
 
 - When a product is deleted from the control panel
 - When a product is deleted via the API
 
-## Customers
+### Customers
 
-### store/customer/created
+#### store/customer/created
 
 - When a customer is created in the control panel
 
-### store/customer/updated
+#### store/customer/updated
 
 - When a customer is updated in the control panel
 
-### store/customer/deleted
+#### store/customer/deleted
 
 - When a customer is deleted in the control panel
 
-## Orders
+### Orders
 
-### store/orders/created
+#### store/orders/created
 
 - When an order is created via checkout
 - When a manual order is created via the control panel
 
-### store/orders/updated
+#### store/orders/updated
 
 - When an order is updated via the control panel
 - When the order status is updated via the control panel
 - When the order status is updated via the API
 
-### store/orders/archived
+#### store/orders/archived
 
 - When the order is archived from the control panel
 
-## Store
+### Store
 
-### store/app/uninstalled
+#### store/app/uninstalled
 
 - When the store has been removed from the system
