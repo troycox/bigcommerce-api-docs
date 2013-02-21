@@ -21,6 +21,10 @@
      
    </tr>
    <tr>
+     <td><a href="#put-productsidimagesidjson">PUT /products/id/images/id.json</a></td>
+     
+   </tr>
+   <tr>
      <td><a href="#get-productsidimagescountjson">GET /products/id/images/count.json</a></td>
      
    </tr>
