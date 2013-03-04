@@ -7,14 +7,14 @@
  </thead>
  <tbody>
    <tr>
-     <td><a href="#get-customersjson">GET  /coupons.json</a></td>
+     <td><a href="#get-couponsjson">GET  /coupons.json</a></td>
    </tr>
    <tr>
-     <td><a href="#get-customersidjson">GET /coupons/id.json</a></td>
+     <td><a href="#get-couponsidjson">GET /coupons/id.json</a></td>
    </tr>
 
    <tr>
-     <td><a href="#post-brandsjson">POST /coupons.json </a></td>
+     <td><a href="#post-couponsjson">POST /coupons.json </a></td>
    </tr>
 
    <tr>
