@@ -360,7 +360,7 @@ Creates a coupon
 
 
 ### GET coupons/id.json
-GET a customer from a store
+GET a coupon from a store
 
 #### Request
 This GET request does not take any parameters.
