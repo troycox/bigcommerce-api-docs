@@ -132,7 +132,7 @@ List of coupons
     "max_uses_per_customer": 0,
     "restricted_to": {
         "states": {
-            "AU": [Australian Capital Territory"]
+            "AU": ["Australian Capital Territory"]
         }
     },
     "shipping_methods": null
