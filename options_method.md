@@ -1,13 +1,13 @@
 ## Overview
-The HTTP OPTIONS method can be used to discover the capabilities and requirements of resources in the BigCommerce API. The OPTIONS method itself is defined as follows according to the HTTP/1.1 spec:
+The HTTP OPTIONS method can be used to discover the capabilities and requirements of resources in the Bigcommerce API. The OPTIONS method itself is defined as follows according to the HTTP/1.1 spec:
 
 	The OPTIONS method represents a request for information about the communication options available on the request/response chain identified by the Request-URI. This method allows the client to determine the options and/or requirements associated with a resource, or the capabilities of a server, without implying a resource action or initiating a resource retrieval.
 
 	http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
-The BigCommerce API uses the OPTIONS method to describe the methods which are available for a certain resource (such as GET, POST, PUT and DELETE) as well as the resource-specific fields and their various properties. A smart or dynamic client can utilise this method to discover which methods are available for a resource, which fields are available or required for a method and the data requirements for each field.
+The Bigcommerce API uses the OPTIONS method to describe the methods which are available for a certain resource (such as GET, POST, PUT and DELETE) as well as the resource-specific fields and their various properties. A smart or dynamic client can utilise this method to discover which methods are available for a resource, which fields are available or required for a method and the data requirements for each field.
 
-Unless noted otherwise, the OPTIONS method is available for all BigCommerce API resources.
+Unless noted otherwise, the OPTIONS method is available for all Bigcommerce API resources.
 
 The response headers for an OPTIONS request will contain an Allow header describing (as a CSV) a list of permitted HTTP methods for the requested resource, while the response-body will contain a list of fields entities as described below.
 
