@@ -51,17 +51,323 @@ This will provide a response that contains the access_token and a producer, whic
 To subscribe to events you would make a POST request with the following fields - producer, scope, deliverymethod, destination. You also need to define two header fields <code>X_AUTH_CLIENT_ID</code> whose value will be the client_id you generated for your app via the Dev Portal (as described above) and <code>X_AUTH_TOKEN</code> which has the above generated access_token's value.
 
 <pre>
-    curl -XPOST -d '{"producer":"store/xxxx","scope":"products/*","deliverymethod":"HTTP_POST","destination":{"url":"http://requestb.in/nf4nqbnf"}}' -H 'X_AUTH_CLIENT_ID: client123' -H 'X_AUTH_TOKEN: 12345' https://hooks-beta.bigcommerce.com
+    curl -XPOST -d '{"producer":"store/xxxx","scope":"store/product/*","deliverymethod":"HTTP_POST","destination":{"url":"https://requestb.in/nf4nqbnf"}}' -H 'X_AUTH_CLIENT_ID: client123' -H 'X_AUTH_TOKEN: 12345' https://hooks-beta.bigcommerce.com
 </pre>
 
 The above example demonstrates how you can subscribe for product updates. Make a note of the "destination" field in the request. This is a JSON object containing a "url" field. Make sure you point this to the location where Bigcommerce sends you notifications. If everything goes well, you will see the following response -
 
 <pre>
-    {"client_id":"client123","created_at":"2013-02-12T17:33:04+00:00","deliverymethod":"HTTP_POST","destination":{"url":"http://requestb.in/nf4nqbnf"},"id":33,"producer":"store/xxxx","scope":"products/*","updated_at":"2013-02-12T17:33:04+00:00"}
+    {"client_id":"client123","created_at":"2013-02-12T17:33:04+00:00","deliverymethod":"HTTP_POST","destination":{"url":"https://requestb.in/nf4nqbnf"},"id":33,"producer":"store/xxxx","scope":"store/product/*","updated_at":"2013-02-12T17:33:04+00:00"}
 </pre>
 
 ### Things to remember regarding Payload
 
 1. In the postback, we send a light payload with only minimum details regarding the events that got triggered. It's up to you how you want to handle the notification in your application. For instance, we will send you details indicating that a product was updated, and you might want to handle it by fetching the new product via an API call.
 2. Bulk data imports will trigger the relevant events for every record affected. For example, if you have a hook on store/product/create and then the merchant imports 2,000 products, then there will be 2,000 event postbacks. 
-3. Payloads are serialized per hook per store. We are looking at enabling a replay feature down the road. What this means is, based on the serialized payload IDs, 3rd parties can detect if they've missed certain postbacks and then they, via a future update, you will be able call a replay method to get the missing events. 
+3. Payloads are serialized per hook per store. We are looking at enabling a replay feature down the road. What this means is, based on the serialized payload IDs, 3rd parties can detect if they've missed certain postbacks and then they, via a future update, you will be able call a replay method to get the missing events.
+
+## API Endpoints
+
+### Operations
+
+<table>
+	<tr>
+		<th>Verb</th>
+		<th>Path</th>
+		<th>Param (query string)</th>
+		<th>Operation</th>
+	</tr>
+
+	<tr><td>POST</td><td>/</td><td></td><td>Create a new webhook</td></tr>
+	<tr><td>GET</td><td>/:id</td><td></td><td>Get a detailed information for a webhook of a given :id</td></tr>
+	<tr><td>PUT</td><td>/:id</td><td></td><td>Update a webhook of a given :id</td></tr>
+	<tr><td>DELETE</td><td>/:id</td><td></td><td>Delete a webhook of a given :id</td></tr>
+
+	<tr><td>GET</td><td>/producer/:producer</td><td></td><td>List all the webhook you have from a given :producer</td></tr>
+	<tr><td>GET</td><td>/producer/:producer</td><td>scope=:scope</td><td>List all the webhook you have from a given :producer, filtered by :scope</td></tr>
+</table>
+
+### Payload Fields
+
+<table>
+	<tr>
+		<th>Field</th>
+		<th>Type</th>
+		<th>Example</th>
+		<th>Description</th>
+	</tr>
+
+	<tr><td><strong>id</strong></td><td>integer</td><td>101</td><td>The ID of the webhook</td></tr>
+	<tr><td><strong>producer</strong></td><td>string</td><td>store/d34db33f</td><td>The identifier of the producer of the event (store)</td></tr>
+	<tr><td><strong>scope</strong></td><td>string</td><td>store/product/*</td><td>The event you are subscribing to in a "/" delimited path format. Accepts the * wildcard.</td></tr>
+	<tr><td><strong>client_id</strong> (read only)</td><td>string</td><td>a85a54c8fae33b2eb3b9d563a4664992</td><td>The client_id of the subscriber</td></tr>
+	<tr><td><strong>delivery_method</strong></td><td>string</td><td>HTTP_POST</td><td>The method of delivery for this webhook. At this moment we only support HTTP_POST.</td></tr>	
+	<tr><td><strong>destination</strong></td><td>object</td><td>{
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	}</td><td>The destination of the subscriber. For HTTP_POST type of delivery we allow a "headers" object to be passed in for additional headers.</td></tr>
+	
+	<tr><td><strong>created_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The creation timestamp</td></tr>
+	
+	<tr><td><strong>updated_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The update timestamp</td></tr>
+	
+</table>
+
+## Create (POST) example
+
+#### Request POST /
+
+<pre>
+POST / HTTP/1.1
+Host: hooks-beta.bigcommerce.com
+Content-Type: application/json
+X_AUTH_CLIENT_ID: d34db33f
+X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+
+{
+	"producer": "store/74124",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	}
+}
+</pre>
+
+#### CURL
+<pre>
+curl -XPOST -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X_AUTH_TOKEN":"d34db33f"},"url":"https://superapp.com/webhook/orders"}}' -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
+
+</pre>
+
+#### Response (success)
+
+<pre>
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+{
+	"id": 101,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-17T11:27:50+11:00"
+}
+</pre>
+
+In the case of failure the API endpoint will return with non 200 OK response code.
+
+
+
+
+## Read (GET) example
+
+#### Request GET /:id
+
+<pre>
+GET /101 HTTP/1.1
+Host: hooks-beta.bigcommerce.com
+Accept: application/json
+X_AUTH_CLIENT_ID: d34db33f
+X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+</pre>
+
+#### CURL
+
+<pre>
+curl -XGET -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
+</pre>
+
+#### Response (success)
+
+<pre>
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+{
+	"id": 101,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-17T11:27:50+11:00"
+}
+</pre>
+
+
+
+
+## Update (PUT) example
+
+#### Request PUT /:id
+
+<pre>
+PUT /101 HTTP/1.1
+Host: hooks-beta.bigcommerce.com
+Content-Type: application/json
+X_AUTH_CLIENT_ID: d34db33f
+X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+
+{
+	"producer": "store/74124",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders_changed"
+	}
+}
+</pre>
+
+#### CURL
+<pre>
+curl -XPUT -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X_AUTH_TOKEN":"d34db33f"},"url":"https://superapp.com/webhook/orders_changed"}}' -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
+
+</pre>
+
+#### Response (success)
+
+<pre>
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+{
+	"id": 101,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders_changed"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-18T11:27:50+11:00"
+}
+</pre>
+
+
+
+## Delete (DELETE) example
+
+#### Request DELETE /:id
+
+<pre>
+DELETE /101 HTTP/1.1
+Host: hooks-beta.bigcommerce.com
+Accept: application/json
+X_AUTH_CLIENT_ID: d34db33f
+X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+</pre>
+
+#### CURL
+
+<pre>
+curl -XDELETE -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
+</pre>
+
+#### Response (success)
+
+<pre>
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+{
+	"id": 101,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-17T11:27:50+11:00"
+}
+</pre>
+
+
+
+## Listing hooks by producer (GET) example
+
+#### Request GET /producer/:producer
+
+<pre>
+GET /101 HTTP/1.1
+Host: hooks-beta.bigcommerce.com
+Accept: application/json	
+X_AUTH_CLIENT_ID: d34db33f
+X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+</pre>
+
+#### CURL
+
+<pre>
+curl -XGET -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/producer/store/74124
+</pre>
+
+#### Response (success)
+
+<pre>
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+[{
+	"id": 101,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/order/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-17T11:27:50+11:00"
+},
+{
+	"id": 102,
+	"producer": "store/74124",
+	"client_id": "d34db33f",
+	"scope": "store/product/*",
+	"deliverymethod": "HTTP_POST",
+	"destination": {
+		"headers": {
+			"X_AUTH_TOKEN": "d34db33f"
+		},
+		"url": "https://superapp.com/webhook/orders"
+	},
+	"created_at": "2013-01-17T11:27:50+11:00",
+	"updated_at": "2013-01-17T11:27:50+11:00"
+}]
+</pre>
+
