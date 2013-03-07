@@ -77,48 +77,56 @@ The above example demonstrates how you can subscribe for product updates. Make a
 
 ### Operations
 
-<table>
-	<tr>
-		<th>Verb</th>
-		<th>Path</th>
-		<th>Param (query string)</th>
-		<th>Operation</th>
-	</tr>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Verb</th>
+			<th>Path</th>
+			<th>Param (query string)</th>
+			<th>Operation</th>
+		</tr>
+	</thead>
 
-	<tr><td>POST</td><td>/</td><td></td><td>Create a new webhook</td></tr>
-	<tr><td>GET</td><td>/:id</td><td></td><td>Get a detailed information for a webhook of a given :id</td></tr>
-	<tr><td>PUT</td><td>/:id</td><td></td><td>Update a webhook of a given :id</td></tr>
-	<tr><td>DELETE</td><td>/:id</td><td></td><td>Delete a webhook of a given :id</td></tr>
+	<tbody>
+		<tr><td>POST</td><td>/</td><td></td><td>Create a new webhook</td></tr>
+		<tr><td>GET</td><td>/:id</td><td></td><td>Get a detailed information for a webhook of a given :id</td></tr>
+		<tr><td>PUT</td><td>/:id</td><td></td><td>Update a webhook of a given :id</td></tr>
+		<tr><td>DELETE</td><td>/:id</td><td></td><td>Delete a webhook of a given :id</td></tr>
 
-	<tr><td>GET</td><td>/producer/:producer</td><td></td><td>List all the webhook you have from a given :producer</td></tr>
-	<tr><td>GET</td><td>/producer/:producer</td><td>scope=:scope</td><td>List all the webhook you have from a given :producer, filtered by :scope</td></tr>
+		<tr><td>GET</td><td>/producer/:producer</td><td></td><td>List all the webhook you have from a given :producer</td></tr>
+		<tr><td>GET</td><td>/producer/:producer</td><td>scope=:scope</td><td>List all the webhook you have from a given :producer, filtered by :scope</td></tr>
+	</tbody>
 </table>
 
 ### Payload Fields
 
-<table>
-	<tr>
-		<th>Field</th>
-		<th>Type</th>
-		<th>Example</th>
-		<th>Description</th>
-	</tr>
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Field</th>
+			<th>Type</th>
+			<th>Example</th>
+			<th>Description</th>
+		</tr>
+	</thead>
 
-	<tr><td><strong>id</strong></td><td>integer</td><td>101</td><td>The ID of the webhook</td></tr>
-	<tr><td><strong>producer</strong></td><td>string</td><td>store/d34db33f</td><td>The identifier of the producer of the event (store)</td></tr>
-	<tr><td><strong>scope</strong></td><td>string</td><td>store/product/*</td><td>The event you are subscribing to in a "/" delimited path format. Accepts the * wildcard.</td></tr>
-	<tr><td><strong>client_id</strong> (read only)</td><td>string</td><td>a85a54c8fae33b2eb3b9d563a4664992</td><td>The client_id of the subscriber</td></tr>
-	<tr><td><strong>delivery_method</strong></td><td>string</td><td>HTTP_POST</td><td>The method of delivery for this webhook. At this moment we only support HTTP_POST.</td></tr>	
-	<tr><td><strong>destination</strong></td><td>object</td><td>{
+	<tbody>
+		<tr><td><strong>id</strong></td><td>integer</td><td>101</td><td>The ID of the webhook</td></tr>
+		<tr><td><strong>producer</strong></td><td>string</td><td>store/d34db33f</td><td>The identifier of the producer of the event (store)</td></tr>
+		<tr><td><strong>scope</strong></td><td>string</td><td>store/product/*</td><td>The event you are subscribing to in a "/" delimited path format. Accepts the * wildcard.</td></tr>
+		<tr><td><strong>client_id</strong> (read only)</td><td>string</td><td>a85a54c8fae33b2eb3b9d563a4664992</td><td>The client_id of the subscriber</td></tr>
+		<tr><td><strong>delivery_method</strong></td><td>string</td><td>HTTP_POST</td><td>The method of delivery for this webhook. At this moment we only support HTTP_POST.</td></tr>	
+		<tr><td><strong>destination</strong></td><td>object</td><td>{
 		"headers": {
 			"X_AUTH_TOKEN": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	}</td><td>The destination of the subscriber. For HTTP_POST type of delivery we allow a "headers" object to be passed in for additional headers.</td></tr>
 	
-	<tr><td><strong>created_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The creation timestamp</td></tr>
+		<tr><td><strong>created_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The creation timestamp</td></tr>
 	
-	<tr><td><strong>updated_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The update timestamp</td></tr>
+		<tr><td><strong>updated_at</strong> (read only)</td><td>string</td><td>2013-01-17T11:27:50+11:00</td><td>The update timestamp</td></tr>
+	</tbody>
 	
 </table>
 
