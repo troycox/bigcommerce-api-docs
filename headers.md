@@ -1,7 +1,7 @@
 ## HTTP Headers
 
 ### Request Headers
-The BigCommerce API supports various HTTP headers which are used for authorization, controlling content type. Some headers can be also used for purposes such as increasing performance of your application by only returning responses when content has been modified.
+The Bigcommerce API supports various HTTP headers which are used for authorization, controlling content type. Some headers can be also used for purposes such as increasing performance of your application by only returning responses when content has been modified.
 <table class="table table-bordered"><thead><tr >
 <th  data-column="0"><div ><p> Header </p></div></th>
 <th  data-column="1"><div ><p> Operations </p></div></th>
