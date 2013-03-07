@@ -28,7 +28,7 @@ There are no filters accepted on this request
 Store resource
 <pre>
 {
-	"hosting_id": "store-1234",
+	"id": "store-1234",
 	"domain": "mystore.com",
 	"name": "My Store",
 	"address": "13170 Round Bluff Crossing, St. Benedict, Texas, 77174-3311",
