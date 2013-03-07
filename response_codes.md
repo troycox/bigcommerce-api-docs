@@ -137,7 +137,7 @@ These codes are returned for requests that could not be processed due to an inte
 <tr>
 <td ><p> 507 <br class="atl-forced-newline"> </p></td>
 <td ><p> Insufficient Storage <br class="atl-forced-newline"> </p></td>
-<td ><p> When the store has reached a limitation for the resource according to their BigCommerce plan (eg 500 product limit). <br class="atl-forced-newline"> </p></td>
+<td ><p> When the store has reached a limitation for the resource according to their Bigcommerce plan (eg 500 product limit). <br class="atl-forced-newline"> </p></td>
 </tr>
 <tr>
 <td ><p> 509 <br class="atl-forced-newline"> </p></td>
