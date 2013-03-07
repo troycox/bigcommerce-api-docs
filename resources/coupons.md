@@ -45,7 +45,7 @@
 GET coupons from a store
 
 #### Request
-These fields can be used to filter the query. By default, without any filters, the GET request returns all the customers.
+These fields can be used to filter the query. By default, without any filters, the GET request returns all the coupons.
 
 <table class="table table-bordered ">
   <thead>
@@ -132,7 +132,7 @@ List of coupons
     "max_uses_per_customer": 0,
     "restricted_to": {
         "states": {
-            "AU": [Australian Capital Territory"]
+            "AU": ["Australian Capital Territory"]
         }
     },
     "shipping_methods": null
@@ -360,7 +360,7 @@ Creates a coupon
 
 
 ### GET coupons/id.json
-GET a customer from a store
+GET a coupon from a store
 
 #### Request
 This GET request does not take any parameters.
