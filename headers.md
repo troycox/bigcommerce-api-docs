@@ -119,7 +119,7 @@ application/xml (for .xml requests, or if no extension is supplied) </p></td>
 <td ><p> X-BC-Store-Version<br class="atl-forced-newline"> </p></td>
 <td ><p> All<br class="atl-forced-newline"> </p></td>
 <td ><p> A version code.<br class="atl-forced-newline"> </p></td>
-<td ><p> The version of BigCommerce the store is running on. This header is available from versions 7.3.6+.<br class="atl-forced-newline"> </p></td>
+<td ><p> The version of Bigcommerce the store is running on. This header is available from versions 7.3.6+.<br class="atl-forced-newline"> </p></td>
 <td ><p> 7.3.6<br class="atl-forced-newline"> </p></td>
 </tr>
 </tbody></table>
