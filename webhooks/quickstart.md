@@ -21,6 +21,13 @@ Currently the beta test endpoint for webhooks is at https://hooks-beta.bigcommer
 7. store/product/created
 8. store/product/updated
 9. store/product/deleted
+10. store/product/lowStockReached (coming soon)
+11. store/product/outOfStock (coming soon)
+12. store/product/productBackInStock (coming soon)
+13. store/product/stockLevelChanged (coming soon)
+14. store/product/addedToCart (coming soon)
+15. store/product/removedFromCart (coming soon)
+16. store/product/ordered (coming soon)
 10. store/customer/* (all events on the customer resource)
 10. store/customer/created
 11. store/customer/updated
