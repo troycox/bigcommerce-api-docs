@@ -172,7 +172,7 @@ Create a new customer
 
 #### Request
 
-The following fields are supported for creating customers. The `first_name`, `last_name` and `email` fields are required
+The following fields are supported for creating customers. The `first_name`, `last_name` and `email` fields are required:
 
 <table class="table table-bordered">
   <thead>
