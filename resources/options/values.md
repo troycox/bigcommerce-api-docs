@@ -21,6 +21,10 @@
      
    </tr>
    <tr>
+     <td><a href="#put-optionsvaluesidjson">PUT /options/values/id.json</a></td>
+     
+   </tr>   
+   <tr>
      <td><a href="#get-optionsidvaluescountjson">GET /options/id/values/count.json</a></td>
      
    </tr>
