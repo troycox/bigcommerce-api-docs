@@ -11,7 +11,7 @@
      
    </tr>
    <tr>
-     <td><a href="#post-optionsetoptionsjson">POST /optionsets/options.json </a></td>
+     <td><a href="#post-optionsetoptionsjson">POST /optionsets/id/options.json </a></td>
      
    </tr>
    <tr>
@@ -19,7 +19,7 @@
      
    </tr>
    <tr>
-     <td><a href="#put-optionsetoptionsidjson">PUT /optionsets/options/id.json</a></td>
+     <td><a href="#put-optionsetoptionsidjson">PUT /optionsets/id/options/id.json</a></td>
      
    </tr>
    <tr>
@@ -43,54 +43,8 @@
 GET options for an option set
 
 #### Request
-These fields can be used to filter the query. By default, without any filters, the GET request returns all the options.
 
-<table class="table table-bordered ">
-  <thead>
-   <tr>
-     <th style="width: 100px;">Field</th>
-     <th style="width: 50px;">Type</th>
-     <th>description</th>
-   </tr>
-  </thead>
-  <tbody>
-   
-   <tr>
-     <td>name</td>
-     <td>string</td>
-     
-     <td>The name of the option. Must be unique.</td>
-   </tr>
-   <tr>
-     <td>display_name</td>
-     <td>string</td>
-     
-     <td>Friendly name displayed to the customer</td>
-   </tr>
-   <tr>
-     <td>type</td>
-     <td>enum</td>
-     
-     <td>The type of option (N, D, MT, C, F, T, RB, RT, S, P, PI, CS)
-      <ul>
-        <li> N - Numbers only text </li>
-        <li> D - Date </li>
-        <li> MT - Multiline text </li>
-        <li> C - Checkbox </li>
-        <li> F - File </li>
-        <li> T - Text </li>
-        <li> RB - Radio list </li>
-        <li> RT - Rectangle list </li>
-        <li> S - Select box </li>
-        <li> P - Product list </li>
-        <li> PI - Product list with images </li>
-        <li> CS - Swatch </li>
-      </ul>
-     </td>
-   </tr>
-   
-  </tbody>
-</table>
+Filtering is not supported on the option set options resource.
 
 #### Response
 List of options
