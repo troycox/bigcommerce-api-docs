@@ -55,10 +55,10 @@ This will provide a response that contains the access_token and a producer, whic
 
 ### Events
 
-To subscribe to events you would make a POST request with the following fields - producer, scope, deliverymethod, destination. You also need to define two header fields <code>X_AUTH_CLIENT_ID</code> whose value will be the client_id you generated for your app via the Dev Portal (as described above) and <code>X_AUTH_TOKEN</code> which has the above generated access_token's value.
+To subscribe to events you would make a POST request with the following fields - producer, scope, deliverymethod, destination. You also need to define two header fields <code>X-Auth-Client</code> whose value will be the client_id you generated for your app via the Dev Portal (as described above) and <code>X-Auth-Token</code> which has the above generated access_token's value.
 
 <pre>
-    curl -XPOST -d '{"producer":"store/xxxx","scope":"store/product/*","deliverymethod":"HTTP_POST","destination":{"url":"https://requestb.in/nf4nqbnf"}}' -H 'X_AUTH_CLIENT_ID: client123' -H 'X_AUTH_TOKEN: 12345' https://hooks-beta.bigcommerce.com
+    curl -XPOST -d '{"producer":"store/xxxx","scope":"store/product/*","deliverymethod":"HTTP_POST","destination":{"url":"https://requestb.in/nf4nqbnf"}}' -H 'X-Auth-Client: client123' -H 'X-Auth-Token: 12345' https://hooks-beta.bigcommerce.com
 </pre>
 
 The above example demonstrates how you can subscribe for product updates. Make a note of the "destination" field in the request. This is a JSON object containing a "url" field. Make sure you point this to the location where Bigcommerce sends you notifications. If everything goes well, you will see the following response -
@@ -118,7 +118,7 @@ The above example demonstrates how you can subscribe for product updates. Make a
 		<tr><td><strong>delivery_method</strong></td><td>string</td><td>HTTP_POST</td><td>The method of delivery for this webhook. At this moment we only support HTTP_POST.</td></tr>	
 		<tr><td><strong>destination</strong></td><td>object</td><td>{
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	}</td><td>The destination of the subscriber. For HTTP_POST type of delivery we allow a "headers" object to be passed in for additional headers.</td></tr>
@@ -138,8 +138,8 @@ The above example demonstrates how you can subscribe for product updates. Make a
 POST / HTTP/1.1
 Host: hooks-beta.bigcommerce.com
 Content-Type: application/json
-X_AUTH_CLIENT_ID: d34db33f
-X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+X-Auth-Client: d34db33f
+X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992
 
 {
 	"producer": "store/74124",
@@ -147,7 +147,7 @@ X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	}
@@ -156,7 +156,7 @@ X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
 
 #### CURL
 <pre>
-curl -XPOST -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X_AUTH_TOKEN":"d34db33f"},"url":"https://superapp.com/webhook/orders"}}' -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
+curl -XPOST -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X-Auth-Token":"d34db33f"},"url":"https://superapp.com/webhook/orders"}}' -H 'X-Auth-Client: d34db33f' -H 'X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
 
 </pre>
 
@@ -174,7 +174,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	},
@@ -196,14 +196,14 @@ In the case of failure the API endpoint will return with non 200 OK response cod
 GET /101 HTTP/1.1
 Host: hooks-beta.bigcommerce.com
 Accept: application/json
-X_AUTH_CLIENT_ID: d34db33f
-X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+X-Auth-Client: d34db33f
+X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992
 </pre>
 
 #### CURL
 
 <pre>
-curl -XGET -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
+curl -XGET -H 'X-Auth-Client: d34db33f' -H 'X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
 </pre>
 
 #### Response (success)
@@ -220,7 +220,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	},
@@ -240,8 +240,8 @@ Content-Type: application/json
 PUT /101 HTTP/1.1
 Host: hooks-beta.bigcommerce.com
 Content-Type: application/json
-X_AUTH_CLIENT_ID: d34db33f
-X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+X-Auth-Client: d34db33f
+X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992
 
 {
 	"producer": "store/74124",
@@ -249,7 +249,7 @@ X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders_changed"
 	}
@@ -258,7 +258,7 @@ X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
 
 #### CURL
 <pre>
-curl -XPUT -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X_AUTH_TOKEN":"d34db33f"},"url":"https://superapp.com/webhook/orders_changed"}}' -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
+curl -XPUT -d '{"producer":"store/74124","scope":"store/order/*","deliverymethod":"HTTP_POST","destination":{"headers":{"X-Auth-Token":"d34db33f"},"url":"https://superapp.com/webhook/orders_changed"}}' -H 'X-Auth-Client: d34db33f' -H 'X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com
 
 </pre>
 
@@ -276,7 +276,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders_changed"
 	},
@@ -295,14 +295,14 @@ Content-Type: application/json
 DELETE /101 HTTP/1.1
 Host: hooks-beta.bigcommerce.com
 Accept: application/json
-X_AUTH_CLIENT_ID: d34db33f
-X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+X-Auth-Client: d34db33f
+X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992
 </pre>
 
 #### CURL
 
 <pre>
-curl -XDELETE -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
+curl -XDELETE -H 'X-Auth-Client: d34db33f' -H 'X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/1
 </pre>
 
 #### Response (success)
@@ -319,7 +319,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	},
@@ -338,14 +338,14 @@ Content-Type: application/json
 GET /101 HTTP/1.1
 Host: hooks-beta.bigcommerce.com
 Accept: application/json	
-X_AUTH_CLIENT_ID: d34db33f
-X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992
+X-Auth-Client: d34db33f
+X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992
 </pre>
 
 #### CURL
 
 <pre>
-curl -XGET -H 'X_AUTH_CLIENT_ID: d34db33f' -H 'X_AUTH_TOKEN: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/producer/store/74124
+curl -XGET -H 'X-Auth-Client: d34db33f' -H 'X-Auth-Token: a85a54c8fae33b2eb3b9d563a4664992' https://hooks-beta.bigcommerce.com/producer/store/74124
 </pre>
 
 #### Response (success)
@@ -362,7 +362,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	},
@@ -377,7 +377,7 @@ Content-Type: application/json
 	"deliverymethod": "HTTP_POST",
 	"destination": {
 		"headers": {
-			"X_AUTH_TOKEN": "d34db33f"
+			"X-Auth-Token": "d34db33f"
 		},
 		"url": "https://superapp.com/webhook/orders"
 	},
