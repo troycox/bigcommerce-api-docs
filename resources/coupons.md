@@ -26,10 +26,6 @@
    </tr>
 
    <tr>
-     <td><a href="#get-couponscountjson">GET /coupons/count.json</a></td>
-   </tr>
-
-   <tr>
      <td><a href="#delete-couponsjson">DELETE /coupons.json</a></td>
    </tr>
 
