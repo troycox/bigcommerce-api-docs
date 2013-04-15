@@ -53,9 +53,27 @@ These fields can be used to filter the query. By default, without any filters, t
   <tbody>
    
    <tr>
-    <td > id </td>
+    <td > min_id </td>
     <td > int </td>
-    <td > The ID of the order. This is auto-generated for new orders. </td>
+    <td > The min ID of the order. This is auto-generated for new orders. </td>
+    </tr>
+
+    <tr>
+    <td > max_id </td>
+    <td > int </td>
+    <td > The min ID of the order. This is auto-generated for new orders. </td>
+    </tr>
+
+    <tr>
+    <td > min_total </td>
+    <td > decimal </td>
+    <td > The min total of the order.</td>
+    </tr>
+
+    <tr>
+    <td > max_total </td>
+    <td > decimal </td>
+    <td > The max total of the order.</td>
     </tr>
 
     <tr>
@@ -65,14 +83,21 @@ These fields can be used to filter the query. By default, without any filters, t
     </tr>
 
     <tr>
-    <td > date_created </td>
-    <td > date </td>
-    <td > The date the order was placed. If not supplied, the current date will be used. Please note that orders processed by live online payment gateways first arrive in the orders data with an "Incomplete" <strong>status</strong> and are then updated (see the <strong>date_modified</strong> field) with final payment information. If your application relies on the arrival of new orders you may need to check both <strong>date_created</strong> and <strong>status</strong> fields (or <strong>status_id</strong>). </td>
+    <td > status_id </td>
+    <td > int </td>
+    <td > The ID of the customer that placed the order or 0 if it was a guest order. </td>
     </tr>
-   <tr>
-    <td > total_inc_tax </td>
-    <td > decimal  </td>
-    <td > The total of the order including tax. </td>
+
+    <tr>
+    <td > min_date_created </td>
+    <td > date </td>
+    <td > The min date when the order was created. If you want to get the orders past a certain date, use this field. The date should be RFC format - 'Tue, 20 Nov 2012 00:00:00 +0000' </td>
+    </tr>
+
+    <tr>
+    <td > max_date_created </td>
+    <td > date </td>
+    <td > The max date when the order was created. If you want to get the orders until a certain date, use this field. The date should be RFC format - 'Tue, 20 Nov 2012 00:00:00 +0000' </td>
     </tr>
 
     <tr>
