@@ -46,10 +46,12 @@ __Note**__ _At this point in time, changes to product options will not trigger a
 
 #### store/customer/created
 
+- When a customer registers (adhoc or during the purchase process) via the storefront
 - When a customer is created in the control panel
 
 #### store/customer/updated
 
+- When a customer updates their details via their account in the storefront
 - When a customer is updated in the control panel
 
 #### store/customer/deleted
