@@ -2,10 +2,10 @@
 
 ### v2 changes
 
-#### 4/3/2013
-1. Customer Endpoint - Create/Update/Delete support for Customer endpoint
+#### 3 Apr 2013
+1. [Customers endpoint](https://developer.bigcommerce.com/api/customers) - Added POST/PUT/DELETE support for Customers endpoint
 
-#### 2/12/2013
-1. Coupons API rolled out. This update gives an ability to create and manage coupons via API.
-2. GET Store settings via API. This update gives an ability to query store data via API.
+#### 12 Feb 2013
+1. [Coupons endpoint](https://developer.bigcommerce.com/api/coupons). A new resource with support for POST/PUT/GET/DELETE.
+2. [Store endpoint](https://developer.bigcommerce.com/api/store). A new resource with support for GET.
 
