@@ -178,7 +178,7 @@ tr.mandatory {
      
      <td>A meta description to include</td>
    </tr>
-   <tr class="mandatory">
+   <tr>
      <td >image_file</td>
      <td>string</td>
      
