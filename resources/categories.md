@@ -184,7 +184,7 @@ tr.mandatory {
      
      <td>A valid image</td>
    </tr>
-   <tr class="mandatory">
+   <tr>
      <td >layout_file</td>
      <td>string</td>
      
