@@ -39,7 +39,7 @@
 </table>
    
 ## Description
-### GET options.json
+### GET optionsets/options.json
 GET options for an option set
 
 #### Request
@@ -78,7 +78,7 @@ List of options
 ]
 </pre>
 
-### POST options.json
+### POST optionsets/options.json
 Create options in a store
 
 #### Request
@@ -165,7 +165,7 @@ option by ID
 }
 </pre>    
 
-### PUT options/id.json
+### PUT optionsets/options/id.json
 UPDATE a option from a store
 
 #### Request
