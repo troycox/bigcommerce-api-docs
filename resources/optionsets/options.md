@@ -11,7 +11,7 @@
      
    </tr>
    <tr>
-     <td><a href="#post-optionsetoptionsjson">POST /optionsets/id/options.json </a></td>
+     <td><a href="#post-optionsetoptionsjson">POST /optionsets/options.json </a></td>
      
    </tr>
    <tr>
