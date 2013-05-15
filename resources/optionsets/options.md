@@ -7,15 +7,15 @@
  </thead>
  <tbody>
    <tr>
-     <td><a href="#get-optionsetoptionsjson">GET  /optionsets/options.json</a></td>
+     <td><a href="#get-optionsetoptionsjson">GET  /optionsets/id/options.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#post-optionsetoptionsjson">POST /optionsets/options.json </a></td>
+     <td><a href="#post-optionsetoptionsjson">POST /optionsets/id/options.json </a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-optionsetoptionsidjson">GET /optionsets/options/id.json</a></td>
+     <td><a href="#get-optionsetoptionsidjson">GET /optionsets/id/options/id.json</a></td>
      
    </tr>
    <tr>
@@ -23,15 +23,15 @@
      
    </tr>
    <tr>
-     <td><a href="#get-optionsetoptionscountjson">GET /optionsets/options/count.json</a></td>
+     <td><a href="#get-optionsetoptionscountjson">GET /optionsets/id/options/count.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#delete-optionsetoptionsjson">DELETE /optionsets/options.json</a></td>
+     <td><a href="#delete-optionsetoptionsjson">DELETE /optionsets/id/options.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#delete-optionsetoptionsidjson">DELETE /optionsets/options/id.json</a></td>
+     <td><a href="#delete-optionsetoptionsidjson">DELETE /optionsets/id/options/id.json</a></td>
      
    </tr>
    
@@ -41,6 +41,8 @@
 ## Description
 ### GET optionsets/options.json
 GET options for an option set
+
+If you want to get options of a specific optionsets, you can do it by GET optionsets/id/options.json
 
 #### Request
 
@@ -78,8 +80,8 @@ List of options
 ]
 </pre>
 
-### POST optionsets/options.json
-Create options in a store
+### POST optionsets/id/options.json
+Create options for an optionset
 
 #### Request
 The POST request allows following fields. Mandatory fields are styled blue.
@@ -103,7 +105,7 @@ tr.mandatory {
      <td>option_id</td>
      <td>int</td>
      
-     <td>The id of the option this optionset refers to</td>
+     <td>The id of the option this optionset connects to</td>
    </tr>
    
    <tr >
@@ -142,8 +144,8 @@ Creates an option
 }
 </pre>   
 
-### GET options/id.json
-GET a option from a store
+### GET optionsets/id/options/id.json
+GET a particular option in an optionset
 
 #### Request
 This GET request does not take any parameters.
@@ -165,8 +167,8 @@ option by ID
 }
 </pre>    
 
-### PUT optionsets/options/id.json
-UPDATE a option from a store
+### PUT optionsets/id/options/id.json
+UPDATE an option that is part of an optionset
 
 #### Request
 This PUT request takes following parameters.
@@ -215,7 +217,7 @@ A successful put udpates a option in the store
     "value": "appearance"
 }
 </pre>
-### GET optionsets/options/count.json
+### GET optionsets/id/options/count.json
 Get a total number of options in the store
 
 #### Request
@@ -230,8 +232,8 @@ Returns the number of options in the store
 </pre>
 Here are resources to delete options. This is a potentially destrutive operation. Remember that you cannot recover deleted options.
 
-### DELETE optionsets/options.json
-DELETE all options
+### DELETE optionsets/id/options.json
+DELETE all options in an optionset
 
-### DELETE optionsets/options/id.json
-DELETE a option
+### DELETE optionsets/id/options/id.json
+DELETE a option in an optionset

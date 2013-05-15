@@ -42,7 +42,9 @@
 It is useful to understand the relationship between optionsets, options and products. The following diagram is meant to illustrate that.
 
 ![options relationship](https://github.com/bigcommerce/bigcommerce-api-docs/raw/master/images/options.png)
-   
+
+Refer to the <a href="https://developer.bigcommerce.com/quickstarts">quickstarts </a> section on sample code on how to create optionsets
+
 ## Description
 ### GET optionsets.json
 GET optionsets from a store
