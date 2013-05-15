@@ -870,7 +870,7 @@ Creates a product
 }
 </pre>   
 
-### GET products/id.json
+### GET products/{id}.json
 GET a product from a store
 
 #### Request
@@ -993,7 +993,7 @@ product by ID
 } 
 </pre>    
 
-### PUT products/id.json
+### PUT products/{id}.json
 UPDATE a product from a store
 
 #### Request
@@ -1134,5 +1134,5 @@ Here are resources to delete products. This is a potentially destrutive operatio
 ### DELETE products.json
 DELETE all products
 
-### DELETE products/id.json
+### DELETE products/{id}.json
 DELETE a product
