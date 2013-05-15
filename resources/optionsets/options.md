@@ -7,27 +7,27 @@
  </thead>
  <tbody>
    <tr>
-     <td><a href="#get-optionsetoptionsjson">GET  optionsets/options.json</a></td>
+     <td><a href="#get-optionsetoptionsjson">GET  /optionsets/options.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#post-optionsetoptionsjson">POST optionsets/options.json </a></td>
+     <td><a href="#post-optionsetoptionsjson">POST /optionsets/options.json </a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-optionsetoptionsidjson">GET optionsets/options/id.json</a></td>
+     <td><a href="#get-optionsetoptionsidjson">GET /optionsets/options/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#put-optionsetoptionsidjson">PUT optionsets/id/options/id.json</a></td>
+     <td><a href="#put-optionsetoptionsidjson">PUT /optionsets/id/options/id.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-optionsetoptionscountjson">GET optionsets/options/count.json</a></td>
+     <td><a href="#get-optionsetoptionscountjson">GET /optionsets/options/count.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#delete-optionsetoptionsjson">DELETE optionsets/options.json</a></td>
+     <td><a href="#delete-optionsetoptionsjson">DELETE /optionsets/options.json</a></td>
      
    </tr>
    <tr>
