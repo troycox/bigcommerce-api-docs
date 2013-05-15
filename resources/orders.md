@@ -83,12 +83,6 @@ These fields can be used to filter the query. By default, without any filters, t
     </tr>
 
     <tr>
-    <td > status_id </td>
-    <td > int </td>
-    <td > The ID of the customer that placed the order or 0 if it was a guest order. </td>
-    </tr>
-
-    <tr>
     <td > min_date_created </td>
     <td > date </td>
     <td > The min date when the order was created. If you want to get the orders past a certain date, use this field. The date should be RFC format - 'Tue, 20 Nov 2012 00:00:00 +0000' </td>
