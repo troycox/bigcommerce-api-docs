@@ -37,6 +37,11 @@
    
  </tbody>
 </table>
+
+## About
+It is useful to understand the relationship between optionsets, options and products. The following diagram is meant to illustrate that.
+
+![options relationship](https://github.com/bigcommerce/bigcommerce-api-docs/raw/master/images/options.png)
    
 ## Description
 ### GET optionsets.json
