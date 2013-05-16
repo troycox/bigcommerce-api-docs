@@ -7,15 +7,15 @@
  </thead>
  <tbody>
    <tr>
-     <td><a href="#get-ordersidproductsjson">GET orders/id/products.json</a></td>
+     <td><a href="#get-ordersidproductsjson">GET orders/{id}/products.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-ordersidproductsidjson">GET orders/id/products/id.json</a></td>
+     <td><a href="#get-ordersidproductsidjson">GET orders/{id}/products/{id}.json</a></td>
      
    </tr>
    <tr>
-     <td><a href="#get-ordersidproductscountjson">GET /products/count.json</a></td>
+     <td><a href="#get-ordersidproductscountjson">GET orders/{id}/products/count.json</a></td>
      
    </tr>
    
@@ -23,7 +23,7 @@
 </table>
    
 ## Description
-### GET orders/id/products.json
+### GET orders/{id}/products.json
 GET products for an order
 
 #### Request
@@ -87,7 +87,7 @@ List of products
 </pre>
 
 
-### GET orders/id/products/id.json
+### GET orders/{id}/products/{id}.json
 GET a product by id for the order
 
 #### Request
@@ -149,14 +149,14 @@ product by ID
 </pre>    
 
 
-### GET orders/id/products/count.json
-Get a total number of products 
+### GET orders/{id}/products/count.json
+Get a total number of products for an order
 
 #### Request
 This request does not take any parameters.
 
 #### Response
-Returns the number of products  
+Returns the number of products for the order
 <pre>
   {
     "count": 10
