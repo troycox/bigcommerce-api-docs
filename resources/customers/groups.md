@@ -109,12 +109,12 @@ Any combination of the following fields can be sent to create or update a custom
                 <li><strong>none</strong>: customers are prevented from viewing any of the categories in this group</li>
             </ul>
         </p>
-        <p><strong>categories</strong> is an array of category ids.</p>
+        <p><strong>categories</strong> is an array of category ids and should only be supplied if *type* is *specific*.</p>
     </td>
    </tr>
     <tr>
      <td>discount_rules</td>
-     <td>object</td>
+     <td>object_array</td>
      <td>A collection of discount rules which are automatically applied for customers who are members of the group.
 
         <p>All discount rules have the following properties:</p>
@@ -223,11 +223,12 @@ To provide a 5% store-wide discount for customers in the group, provide a <stron
 <pre>
 {
     "name": "Student Discounts",
-    "discount_rules": {
+    "discount_rules": 
+    [{
         "type": "all",
         "method": "percent",
         "amount": 5.00
-    }
+    }]
 }
 </pre>
 
