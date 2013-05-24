@@ -109,7 +109,7 @@ Any combination of the following fields can be sent to create or update a custom
                 <li><strong>none</strong>: customers are prevented from viewing any of the categories in this group</li>
             </ul>
         </p>
-        <p><strong>categories</strong> is an array of category ids and should only be supplied if *type* is *specific*.</p>
+        <p><strong>categories</strong> is an array of category ids and should only be supplied if <b>type</b> is <b>specific</b>.</p>
     </td>
    </tr>
     <tr>
