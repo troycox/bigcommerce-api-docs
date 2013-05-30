@@ -493,7 +493,7 @@ tr.mandatory {
   <tr>
   <td> product_id </td>
   <td> int </td>
-  <td> The ID of the product the product belongs to.&nbsp;See the&nbsp;<a href="/rest">products</a>&nbsp;resource for information. </td>
+  <td> The ID of the product the product belongs to.&nbsp;See the&nbsp;<a href="/api/products">products</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> view_count </td>
@@ -706,50 +706,50 @@ tr.mandatory {
   <tr>
   <td> images </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Images</a>&nbsp;resource for information. </td>
+  <td> See the&nbsp;<a href="/api/products/images">Images</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> discount_rules </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Bulk Discount Rules</a>&nbsp;resource for information. </td>
+  <td> See the&nbsp;<a href="/api/products/discountrules">Bulk Discount Rules</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> configurable_fields </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Configurable Fields</a>&nbsp;resource for information. </td>
+  <td> See the&nbsp;<a href="/api/products/configurablefields">Configurable Fields</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> custom_fields </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Custom Fields</a>&nbsp;resource for information. </td>
+  <td> See the&nbsp;<a href="/api/products/customfields">Custom Fields</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> videos </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Videos</a>&nbsp;resource for information. </td>
+  <td> See the&nbsp;<a href="/api/products/videos">Videos</a>&nbsp;resource for information. </td>
   </tr>
   <tr>
   <td> option_set </td>
   <td> resource  </td>
-  <td> See the&nbsp;<a href="/rest">Option Set</a>&nbsp;resource&nbsp;for information. </td>
+  <td> See the&nbsp;<a href="/api/optionsets">Option Set</a>&nbsp;resource&nbsp;for information. </td>
   </tr>
   <tr>
   <td> rules </td>
   <td> resource  </td>
   <td> Rules which apply to this product only which are based on the products Option Set. 
-  See <a href="/rest">Rules</a> resource for information. </td>
+  See <a href="/api/products/rules">Rules</a> resource for information. </td>
   </tr>
   <tr>
   <td> skus </td>
   <td> resource  </td>
   <td> Stock Keeping Units for the product. 
-  See the <a href="/rest">SKU</a>&nbsp;resource for the definition of a sku object. </td>
+  See the <a href="/api/products/skus">SKU</a>&nbsp;resource for the definition of a sku object. </td>
   </tr>
   <tr>
   <td> options </td>
   <td> resource </td>
   <td> Options from the option set applied to the product. 
-  See the&nbsp;<a href="/rest">Product Options</a>&nbsp;resource for information. </td>
+  See the&nbsp;<a href="/api/options">Product Options</a>&nbsp;resource for information. </td>
   </tr>
   </tbody></table>
 
