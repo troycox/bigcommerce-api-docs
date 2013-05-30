@@ -10,6 +10,7 @@
      <td><a href="#get-couponsjson">GET  /shipping/methods.json</a></td>
    </tr>
 </tbody>
+</table>
 
 ## Description
 
