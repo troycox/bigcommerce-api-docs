@@ -12,10 +12,13 @@
 </tbody>
 
 ## Description
+
 ### GET /shipping/methods.json
+
 GET configured shipping methods from a store
 
 #### Request
+
 These fields can be used to filter the query. By default, without any filters, the GET request returns all the configured shipping methods.
 
 <table class="table table-bordered ">
