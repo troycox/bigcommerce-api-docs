@@ -439,13 +439,13 @@ The API allows you to create overrides for values, e.g: product prices, subtotal
 ##### Specifics on Products
 
 - All products are specified by product_id.
-- If price is not specified, it will automatically be picked up, however you can override it via price_inc_tax and price_ex_tax.
-- Tax will be calculated based on the tax rules specified in the store, however you can optionally override the tax value by specify price_inc_tax and price_ex_tax.
-- For products which are configured to track stock, the quantity specified on the order will reduce the stock on hand. When there is not enough inventory to fulfil the order, it will be rejected with 'out of stock' error code.
-- For products which have min and max quantities specified in their settings, the API will honour these and reject orders appropriately.
-- For Products where product options are required, the API will need to validate to ensure the product options are specified.
+- If price is not specified, it will automatically pick up the price from the store's product catalog, however you can override it via price_inc_tax and price_ex_tax.
+- Tax will be calculated based on the tax rules specified in the store, however you can optionally override the tax values by specifying price_inc_tax and price_ex_tax.
+- For products which are configured to track stock, the quantity specified on the order will reduce the stock on hand. When there is not enough inventory to fulfil the order, it will be rejected with an 'out of stock' error code.
+- For products which have min and max quantities specified in their settings, the API will honor these and reject orders appropriately.
+- For Products where product options are required, the API will validate these requirements to ensure the product options are specified.
 - Product quantity must be specified.
-- Custom products are not supported.
+- Custom products are not supported at this time.
 
 ##### Specifics on Totals
 
@@ -461,10 +461,10 @@ The API allows you to create overrides for values, e.g: product prices, subtotal
 	* Multiple shipments are not supported so it will assume the first address in the collection
 - In the shipping and billing address, their is no requirement to specify 'country' when 'country_ISO2' is specified.
 	* The value specified for 'country_ISO2' will always override any value specified for 'country'
-- No support for coupon redemption.
+- Coupon redemption is not supported at this time.
 - Set customer_id to 0 to specify a guest checkout.
-- order_source cannot be specified and it will be specified as 'external'.
-	* You can optionally specify a value for external_source - the use case is that they can use this field to specify which external source the order is coming from - ie. POS system X, accounting system Y, etc
+- order_source cannot be specified and it will be set to 'external'.
+	* You can optionally specify a value for external_source to specify which external source the order is coming from - ie. POS system X, accounting system Y, etc
 
 
 #### Request
