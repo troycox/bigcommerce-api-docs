@@ -34,7 +34,7 @@ These fields can be used to filter the query. By default, without any filters, t
    <tr>
      <td>id</td>
      <td>integer</td>
-     <td>coupon id</td>
+     <td>shipping method id</td>
    </tr>
    <tr>
      <td>name</td>
