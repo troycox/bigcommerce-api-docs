@@ -2,6 +2,12 @@
 
 ### v2 changes
 
+#### 3 Jun 2013
+1. [Customer Addresses sub-resource](https://developer.bigcommerce.com/api/customers/addresses). Added new Customers sub-resource with support for GET/PUT/POST/DELETE.
+2. [Customer Groups resource](https://xxx.com/xxx). Added new resource with support for GET/PUT/POST/DELETE.
+3. [Store resource](https://developer.bigcommerce.com/api/store). Added fields for the store's default currency settings.
+4. [Products resource](https://developer.bigcommerce.com/api/products). Fixed a bug where the 'min_inventory_level' and 'max_inventory_level' filters weren't working.
+
 #### 27 May 2013
 1. [Orders resource](https://developer.bigcommerce.com/api/orders). Added POST support.
 2. [Orders resource](https://developer.bigcommerce.com/api/orders). Fixed a bug where GET was returning the inc tax value in the 'total_ex_tax' field.
